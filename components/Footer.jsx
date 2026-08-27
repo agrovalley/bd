@@ -22,9 +22,11 @@ export default function Footer() {
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-gold-light mb-3">যোগাযোগ</p>
           <ul className="space-y-2 text-sm text-cream/70">
-            <li>ফোন: +৮৮০ ১XXX-XXXXXX</li>
-            <li>ইমেইল: info@agrovalley.com.bd</li>
-            <li>ঠিকানা: আপনার এলাকার নাম, বাংলাদেশ</li>
+            <li>ফোন: <a href="tel:+8801307085154" className="hover:text-cream transition-colors">+৮৮০ ১৩০৭-০৮৫১৫৪</a></li>
+            <li>ইমেইল: <a href="mailto:johurul.bsc@gmail.com" className="hover:text-cream transition-colors">johurul.bsc@gmail.com</a></li>
+            <li>ঠিকানা: ঝালুকা, আমগাছী হাট-৬২৪০, দুর্গাপুর, রাজশাহী</li>
+            <li><span className="block text-xs text-cream/50">Jhaluka, Amgachi Hat-6240, Durgapur, Rajshahi</span></li>
+            <li><a href="https://www.google.com/maps/@24.3983037,88.730349,16z" target="_blank" rel="noreferrer" className="text-gold-light hover:text-cream transition-colors">Google Maps লোকেশন</a></li>
           </ul>
         </div>
       </div>

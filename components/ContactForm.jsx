@@ -15,7 +15,7 @@ export default function ContactForm() {
     const body = encodeURIComponent(
       `নাম: ${form.name}\nফোন: ${form.phone}\nআগ্রহের বিষয়: ${form.interest}\n\nবার্তা:\n${form.message}`
     );
-    window.location.href = `mailto:info@agrovalley.com.bd?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:johurul.bsc@gmail.com?subject=${subject}&body=${body}`;
   }
 
   const inputClass =
@@ -72,12 +72,22 @@ export default function ContactForm() {
         />
       </div>
 
-      <button
-        type="submit"
-        className="inline-flex items-center gap-2 bg-teal text-cream px-6 py-3 rounded-full font-medium text-sm hover:bg-teal-light transition-colors"
-      >
-        বার্তা পাঠান
-      </button>
+      <div className="flex flex-wrap items-center gap-3">
+        <button
+          type="submit"
+          className="inline-flex items-center gap-2 bg-teal text-cream px-6 py-3 rounded-full font-medium text-sm hover:bg-teal-light transition-colors"
+        >
+          ইমেইল বার্তা পাঠান
+        </button>
+        <a
+          href="https://wa.me/8801307085154"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 border border-teal/30 text-teal px-6 py-3 rounded-full font-medium text-sm hover:bg-teal/5 transition-colors"
+        >
+          WhatsApp
+        </a>
+      </div>
     </form>
   );
 }

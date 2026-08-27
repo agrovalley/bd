@@ -27,9 +27,8 @@ export default function Home() {
             পুকুর থেকে পোল্ট্রি খামার — একই হাতে গড়া, একই মানে বাঁধা।
           </h1>
           <p className="mt-6 max-w-xl text-ink/70 leading-relaxed fade-up" style={{ animationDelay: "0.2s" }}>
-            Agro Valley Limited একটি সমন্বিত কৃষি প্রতিষ্ঠান — নিজস্ব পুকুরে মাছ চাষ,
-            বড় পরিসরে ডিম উৎপাদনকারী পোল্ট্রি খামার, এবং ফিড ও ঔষধের নিজস্ব ডিলারশিপ
-            একই ছাদের নিচে পরিচালিত হয়।
+            Agro Valley Limited একটি সমন্বিত কৃষি প্রতিষ্ঠান, যা উৎপাদন থেকে সরবরাহ—পুরো শৃঙ্খলটি নিজেদের নিয়ন্ত্রণে পরিচালনা করে। Aqua, Poultry এবং Agro-Vet—তিনটি পরিপূরক ইউনিটের মাধ্যমে আমরা মাছ চাষ, ডিম উৎপাদন এবং ফিড ও ঔষধ সরবরাহ করি।
+            <span className="block mt-2 text-sm text-ink/55">An integrated agro enterprise connecting aquaculture, egg production, and feed & veterinary supply across Bangladesh.</span>
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4 fade-up" style={{ animationDelay: "0.3s" }}>
@@ -84,7 +83,7 @@ export default function Home() {
         eyebrow="Division 01 — Aquaculture"
         title="Agro Valley Aqua"
         englishName="Pond-based fish farming & wholesale supply"
-        description="একাধিক বড় পুকুরে বাণিজ্যিক ভিত্তিতে মাছ চাষ করা হয়। উৎপাদিত মাছ মানসম্মত পরিচর্যার মাধ্যমে বড় করে তোলা হয় এবং ঢাকা ও দেশের বিভিন্ন অঞ্চলের পাইকারি ও খুচরা বাজারে সরবরাহ করা হয়।"
+        description="একাধিক পুকুরে বাণিজ্যিক ভিত্তিতে রুই, কাতলা, পাঙ্গাশ, তেলাপিয়াসহ বিভিন্ন প্রজাতির মাছ উৎপাদন করা হয়। মানসম্মত পরিচর্যার মাধ্যমে বড় করে তোলা মাছ ঢাকা ও দেশের বিভিন্ন অঞ্চলের পাইকারি ও খুচরা বাজারে সরবরাহ করা হয়।"
         points={[
           "একাধিক পুকুরে বড় পরিসরে মাছ চাষ",
           "ঢাকা ও দেশব্যাপী পাইকারি সরবরাহ",
@@ -102,7 +101,7 @@ export default function Home() {
         eyebrow="Division 02 — Layer Farming"
         title="Agro Valley Poultry"
         englishName="Large-scale egg production farm"
-        description="বড় পরিসরের পোল্ট্রি খামারে নিয়মিত ও মানসম্মতভাবে ডিম উৎপাদিত হয়। আধুনিক ব্যবস্থাপনা ও নিজস্ব ফিড-ঔষধ ব্যবহারের মাধ্যমে উৎপাদনের গুণগত মান নিশ্চিত করা হয়।"
+        description="বড় পরিসরের লেয়ার পোল্ট্রি খামারে নিয়মিত তাজা ডিম উৎপাদিত হয়। আধুনিক স্বাস্থ্যব্যবস্থাপনা ও নিজস্ব ফিড-ঔষধ ব্যবহারের মাধ্যমে উৎপাদনের গুণগত মান নিশ্চিত করে আড়ত, দোকান ও পরিবেশক পর্যায়ে সরবরাহ করা হয়।"
         points={[
           "বড় পরিসরে লেয়ার মুরগি পালন",
           "নিয়মিত ডিম উৎপাদন ও সরবরাহ",
@@ -118,7 +117,7 @@ export default function Home() {
         eyebrow="Division 03 — Feed & Pharma Dealership"
         title="Agro Valley Agro-Vet"
         englishName="Feed & veterinary medicine — retail and wholesale"
-        description="মাছ ও পোল্ট্রির ফিড এবং ঔষধের একটি পূর্ণাঙ্গ ডিলারশিপ, যেখানে নিজস্ব খামারের চাহিদা মেটানোর পাশাপাশি খুচরা ও পাইকারি পর্যায়ে সরবরাহ করা হয়।"
+        description="মাছের ফিড, পোল্ট্রি ফিড, ঔষধ, ভ্যাকসিন, ভিটামিন, মিনারেল প্রিমিক্স ও অন্যান্য সাপ্লিমেন্টের পূর্ণাঙ্গ ডিলারশিপ। নিজস্ব খামারের অভ্যন্তরীণ সরবরাহের পাশাপাশি খুচরা ও পাইকারি পর্যায়ে সেবা দেওয়া হয়।"
         points={[
           "মাছ ও পোল্ট্রির ফিড সরবরাহ",
           "প্রয়োজনীয় ঔষধ ও ভ্যাকসিন",
@@ -142,10 +141,7 @@ export default function Home() {
           </div>
           <div className="md:col-span-2 space-y-5 text-ink/75 leading-relaxed">
             <p>
-              Agro Valley Limited গড়ে উঠেছে মাছ চাষ, পোল্ট্রি ও কৃষি-উপকরণ সরবরাহের
-              দীর্ঘ অভিজ্ঞতা থেকে। তিনটি আলাদা ইউনিট — Aqua, Poultry এবং Agro-Vet —
-              একে অপরের পরিপূরক হিসেবে কাজ করে, যা প্রতিষ্ঠানকে উৎপাদন থেকে বাজারজাতকরণ
-              পর্যন্ত সম্পূর্ণ নিয়ন্ত্রণ দেয়।
+              Agro Valley Limited একটি সমন্বিত (integrated) কৃষি প্রতিষ্ঠান, যা উৎপাদন থেকে সরবরাহ—পুরো শৃঙ্খলটি নিজেদের নিয়ন্ত্রণে পরিচালনা করে। তিনটি আলাদা ইউনিট—Aqua, Poultry এবং Agro-Vet—একে অপরের পরিপূরক হিসেবে কাজ করে, যা প্রতিষ্ঠানকে উৎপাদন থেকে বাজারজাতকরণ পর্যন্ত সম্পূর্ণ নিয়ন্ত্রণ দেয়।
             </p>
             <p>
               আমরা বিশ্বাস করি, মানসম্মত ফিড ও ঔষধ থেকেই শুরু হয় স্বাস্থ্যকর উৎপাদন —
@@ -171,8 +167,11 @@ export default function Home() {
               ফর্মটি পূরণ করুন অথবা সরাসরি যোগাযোগ করুন।
             </p>
             <ul className="space-y-2 text-sm text-cream/80 font-mono">
-              <li>+৮৮০ ১XXX-XXXXXX</li>
-              <li>info@agrovalley.com.bd</li>
+              <li><a href="tel:+8801307085154" className="hover:text-gold-light transition-colors">+৮৮০ ১৩০৭-০৮৫১৫৪</a></li>
+              <li><a href="mailto:johurul.bsc@gmail.com" className="hover:text-gold-light transition-colors">johurul.bsc@gmail.com</a></li>
+              <li>ঝালুকা, আমগাছী হাট-৬২৪০, দুর্গাপুর, রাজশাহী</li>
+              <li><a href="https://wa.me/8801307085154" target="_blank" rel="noreferrer" className="text-gold-light hover:text-cream transition-colors">WhatsApp-এ যোগাযোগ করুন</a></li>
+              <li><a href="https://www.google.com/maps/@24.3983037,88.730349,16z" target="_blank" rel="noreferrer" className="text-gold-light hover:text-cream transition-colors">Google Maps-এ লোকেশন দেখুন</a></li>
             </ul>
           </div>
 
