@@ -4,7 +4,7 @@ const nextConfig = {
   output: "export",
   trailingSlash: true,
   images: { unoptimized: true },
-  basePath: "/bd",
-  assetPrefix: "/bd/",
+  basePath: process.env.VERCEL ? undefined : "/bd",
+  assetPrefix: process.env.VERCEL ? undefined : "/bd/",
 };
 export default nextConfig;
