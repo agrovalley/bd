@@ -26,12 +26,12 @@ const mono = IBM_Plex_Mono({
 
 export const metadata = {
   metadataBase: new URL("https://avg.vercel.app"),
-  title: "Agro Valley Group | Integrated Agro Enterprise",
+  title: "Agro Valley Limited | Integrated Agro Enterprise",
   description:
-    "Agro Valley Group — মাছ চাষ, ডিম উৎপাদন এবং ফিড ও ভেটেরিনারি সাপ্লাইয়ের সমন্বিত কৃষি প্রতিষ্ঠান। রাজশাহী, বাংলাদেশ।",
+    "Agro Valley Limited — মাছ চাষ, ডিম উৎপাদন এবং ফিড ও ভেটেরিনারি সাপ্লাইয়ের সমন্বিত কৃষি প্রতিষ্ঠান। রাজশাহী, বাংলাদেশ।",
   keywords: [
     "Agro Valley",
-    "Agro Valley Group",
+    "Agro Valley Limited",
     "মাছ চাষ",
     "পোল্ট্রি ফার্ম",
     "ফিড ডিলার",
@@ -44,8 +44,14 @@ export const metadata = {
     "Durgapur",
     "Jhaluka",
   ],
+  verification: {
+    google: "hr8UjF9EGogsrKMyCSQ7BeInsejd8gMWBI9oci_Jvno",
+  },
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Agro Valley Group",
+    title: "Agro Valley Limited",
     description:
       "একটি সমন্বিত কৃষি প্রতিষ্ঠান — Aqua · Poultry · Agro-Vet",
     type: "website",
