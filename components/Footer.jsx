@@ -7,6 +7,9 @@ export default function Footer() {
         <div className="sm:col-span-2">
           <p className="font-display font-bold text-xl text-white">Agro Valley Group</p>
           <p className="mt-1 font-mono text-xs text-brand-light">Quality &middot; Care &middot; Supply</p>
+          <p className="mt-2 text-xs text-white/50">
+            Proprietor: Johurul Haque &middot; স্বত্বাধিকারী: জহুরুল হক
+          </p>
           <p className="mt-3 text-sm leading-relaxed max-w-sm text-white/70">
             একটি সমন্বিত কৃষি প্রতিষ্ঠান — পুকুরে মাছ চাষ, ডিম উৎপাদনের পোল্ট্রি খামার
             এবং ফিড ও ঔষধের পাইকারি-খুচরা সরবরাহ, একই ছাদের নিচে।

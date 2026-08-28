@@ -2,7 +2,7 @@ import Link from "next/link";
 import DivisionBand from "@/components/DivisionBand";
 import OtherUnitsLinks from "@/components/OtherUnitsLinks";
 import ContactCTA from "@/components/ContactCTA";
-import { FeedIllustration } from "@/components/Illustrations";
+import UnitPhoto from "@/components/UnitPhoto";
 
 export const metadata = {
   title: "Agro Valley Agro-Vet | Feed & Veterinary Supply",
@@ -34,7 +34,7 @@ export default function AgroVetPage() {
           "ভিটামিন, মিনারেল প্রিমিক্স ও অন্যান্য সাপ্লিমেন্ট",
           "খুচরা ও পাইকারি — উভয় পর্যায়ে বিক্রয়",
         ]}
-        illustration={<FeedIllustration />}
+        illustration={<UnitPhoto src="/images/agro-valley-shop.jpg" alt="Agro Valley Agro-Vet — দুর্গাপুর, রাজশাহীর শোরুম" priority />}
       />
 
       {/* SUPPLY SCOPE */}

@@ -2,7 +2,7 @@ import Link from "next/link";
 import DivisionBand from "@/components/DivisionBand";
 import OtherUnitsLinks from "@/components/OtherUnitsLinks";
 import ContactCTA from "@/components/ContactCTA";
-import { PoultryIllustration } from "@/components/Illustrations";
+import UnitPhoto from "@/components/UnitPhoto";
 
 export const metadata = {
   title: "Agro Valley Poultry | Fresh Egg Production",
@@ -34,7 +34,7 @@ export default function PoultryPage() {
           "মানসম্মত স্বাস্থ্যব্যবস্থাপনায় উৎপাদিত ডিম",
           "নিজস্ব ফিড ও ব্যবস্থাপনা সহায়তায় খামার পরিচালনা",
         ]}
-        illustration={<PoultryIllustration />}
+        illustration={<UnitPhoto src="/images/poultry-farm.jpg" alt="Agro Valley Poultry — লেয়ার মুরগির খামার" priority />}
       />
 
       {/* HEALTH MANAGEMENT */}

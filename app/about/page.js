@@ -58,6 +58,9 @@ export default function AboutPage() {
               যত্ন এবং নির্ভরযোগ্য সরবরাহ। এই তিনটি নীতির উপর ভিত্তি করেই Agro Valley
               Group-এর প্রতিটি ইউনিট পরিচালিত হয়।
             </p>
+            <p className="font-mono text-sm text-ink/50">
+              Proprietor: Johurul Haque &middot; স্বত্বাধিকারী: জহুরুল হক
+            </p>
           </div>
         </div>
       </section>

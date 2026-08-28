@@ -69,8 +69,9 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-ink/50 mb-2">প্রাথমিক যোগাযোগ ব্যক্তি</p>
-              <p className="text-lg font-medium">জহুরুল হক (Johurul Haque)</p>
+              <p className="font-mono text-xs uppercase tracking-widest text-ink/50 mb-2">প্রোপ্রাইটর</p>
+              <p className="text-lg font-medium">Proprietor: Johurul Haque</p>
+              <p className="text-sm text-ink/60">স্বত্বাধিকারী: জহুরুল হক</p>
             </div>
           </div>
 

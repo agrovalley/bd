@@ -2,7 +2,7 @@ import Link from "next/link";
 import DivisionBand from "@/components/DivisionBand";
 import OtherUnitsLinks from "@/components/OtherUnitsLinks";
 import ContactCTA from "@/components/ContactCTA";
-import { PondIllustration } from "@/components/Illustrations";
+import UnitPhoto from "@/components/UnitPhoto";
 
 export const metadata = {
   title: "Agro Valley Aqua | Commercial Fish Farming",
@@ -34,7 +34,7 @@ export default function AquaPage() {
           "খুচরা ক্রেতা ও আড়তদারদের জন্য চাহিদামাফিক সরবরাহ",
           "নিজস্ব ফিড ও পরিচর্যা ব্যবস্থাপনার মাধ্যমে উৎপাদন",
         ]}
-        illustration={<PondIllustration />}
+        illustration={<UnitPhoto src="/images/aqua-harvest.jpg" alt="Agro Valley Aqua — পুকুর থেকে মাছ সংগ্রহ" priority />}
       />
 
       {/* SUPPLY PROCESS */}

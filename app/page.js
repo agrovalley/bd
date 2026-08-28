@@ -2,7 +2,7 @@ import CycleDiagram from "@/components/CycleDiagram";
 import UnitPreviewCard from "@/components/UnitPreviewCard";
 import ContactCTA from "@/components/ContactCTA";
 import Link from "next/link";
-import { PondIllustration, PoultryIllustration, FeedIllustration } from "@/components/Illustrations";
+import UnitPhoto from "@/components/UnitPhoto";
 
 export default function Home() {
   return (
@@ -94,7 +94,7 @@ export default function Home() {
               title="Agro Valley Aqua"
               englishName="Commercial fish farming"
               description="একাধিক পুকুরে রুই, কাতলা, পাঙ্গাশ ও তেলাপিয়াসহ বিভিন্ন প্রজাতির মাছ চাষ ও পাইকারি সরবরাহ।"
-              illustration={<PondIllustration />}
+              illustration={<UnitPhoto src="/images/aqua-harvest.jpg" alt="পুকুর থেকে মাছ সংগ্রহ" />}
             />
             <UnitPreviewCard
               href="/poultry"
@@ -102,7 +102,7 @@ export default function Home() {
               title="Agro Valley Poultry"
               englishName="Fresh egg production"
               description="বড় পরিসরে লেয়ার মুরগি পালন ও নিয়মিত তাজা ডিম উৎপাদন-সরবরাহ।"
-              illustration={<PoultryIllustration />}
+              illustration={<UnitPhoto src="/images/poultry-farm.jpg" alt="লেয়ার মুরগির খামার" />}
             />
             <UnitPreviewCard
               href="/agro-vet"
@@ -110,7 +110,7 @@ export default function Home() {
               title="Agro Valley Agro-Vet"
               englishName="Feed & veterinary supply"
               description="মাছ ও পোল্ট্রির ফিড, ঔষধ ও সাপ্লিমেন্টের খুচরা ও পাইকারি ডিলারশিপ।"
-              illustration={<FeedIllustration />}
+              illustration={<UnitPhoto src="/images/agro-valley-shop.jpg" alt="Agro Valley Agro-Vet শোরুম" />}
             />
           </div>
         </div>
