@@ -38,7 +38,7 @@ export default function ContactForm() {
         throw new Error(result.error || "বার্তা পাঠানো যায়নি।");
       }
 
-      const subject = encodeURIComponent(`Agro Valley Limited – অনুসন্ধান: ${form.interest}`);
+      const subject = encodeURIComponent(`Agro Valley Group – অনুসন্ধান: ${form.interest}`);
       const body = encodeURIComponent(buildMessage());
       setStatus({ type: "success", message: "তথ্য যাচাই হয়েছে। আপনার ইমেইল অ্যাপ খোলা হচ্ছে…" });
       setForm(INITIAL_FORM);
