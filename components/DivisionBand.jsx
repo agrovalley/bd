@@ -6,15 +6,12 @@ export default function DivisionBand({
   description,
   points,
   reverse,
-  accent,
   dark,
   illustration,
 }) {
-  const bg = dark ? "bg-teal-dim text-cream" : "bg-cream text-ink";
-  const eyebrowColor =
-    accent === "teal" ? "text-teal-light" : accent === "gold" ? "text-gold-dim" : "text-rust";
-  const chipBg =
-    accent === "teal" ? "bg-teal/10 text-teal" : accent === "gold" ? "bg-gold/15 text-gold-dim" : "bg-rust/10 text-rust";
+  const bg = dark ? "bg-ink text-white" : "bg-white text-ink";
+  const eyebrowColor = dark ? "text-brand-light" : "text-brand-dark";
+  const dotColor = dark ? "bg-brand-light" : "bg-brand";
 
   return (
     <section id={id} className={`${bg} relative overflow-hidden scroll-mt-20`}>
@@ -28,17 +25,17 @@ export default function DivisionBand({
           <h2 className="font-display font-bold text-3xl md:text-4xl leading-tight mb-2">
             {title}
           </h2>
-          <p className={`font-mono text-sm mb-6 ${dark ? "text-cream/50" : "text-ink/50"}`}>
+          <p className={`font-mono text-sm mb-6 ${dark ? "text-white/50" : "text-ink/50"}`}>
             {englishName}
           </p>
-          <p className={`leading-relaxed mb-6 ${dark ? "text-cream/80" : "text-ink/80"}`}>
+          <p className={`leading-relaxed mb-6 ${dark ? "text-white/80" : "text-ink/80"}`}>
             {description}
           </p>
           <ul className="space-y-3">
             {points.map((pt, i) => (
               <li key={i} className="flex items-start gap-3">
-                <span className={`mt-1 shrink-0 w-2 h-2 rounded-full ${chipBg.split(" ")[0]}`} />
-                <span className={`text-sm ${dark ? "text-cream/80" : "text-ink/80"}`}>{pt}</span>
+                <span className={`mt-1 shrink-0 w-2 h-2 rounded-full ${dotColor}`} />
+                <span className={`text-sm ${dark ? "text-white/80" : "text-ink/80"}`}>{pt}</span>
               </li>
             ))}
           </ul>

@@ -8,66 +8,66 @@ export default function CycleDiagram() {
         aria-hidden="true"
       >
         <defs>
-          <marker id="arrow-rust" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-            <path d="M0,0 L8,4 L0,8 Z" fill="#A6512E" />
+          <marker id="arrow-dark" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#116B35" />
           </marker>
-          <marker id="arrow-teal" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-            <path d="M0,0 L8,4 L0,8 Z" fill="#0E3B36" />
+          <marker id="arrow-brand" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#16A34A" />
           </marker>
-          <marker id="arrow-gold" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-            <path d="M0,0 L8,4 L0,8 Z" fill="#B8842B" />
+          <marker id="arrow-light" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#4ADE80" />
           </marker>
-          <marker id="arrow-paddy" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-            <path d="M0,0 L8,4 L0,8 Z" fill="#4C7A3D" />
+          <marker id="arrow-ink" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#10251A" />
           </marker>
         </defs>
 
         {/* feed & vet -> aqua */}
         <path
           d="M270,95 Q150,150 100,285"
-          stroke="#A6512E"
+          stroke="#116B35"
           strokeWidth="2.5"
-          markerEnd="url(#arrow-rust)"
+          markerEnd="url(#arrow-dark)"
           className="draw-path"
         />
         {/* feed & vet -> poultry */}
         <path
           d="M330,95 Q450,150 500,285"
-          stroke="#A6512E"
+          stroke="#116B35"
           strokeWidth="2.5"
-          markerEnd="url(#arrow-rust)"
+          markerEnd="url(#arrow-dark)"
           className="draw-path d2"
         />
         {/* aqua -> market */}
         <path
           d="M100,325 Q150,460 270,510"
-          stroke="#0E3B36"
+          stroke="#16A34A"
           strokeWidth="2.5"
-          markerEnd="url(#arrow-teal)"
+          markerEnd="url(#arrow-brand)"
           className="draw-path d3"
         />
         {/* poultry -> market */}
         <path
           d="M500,325 Q450,460 330,510"
-          stroke="#B8842B"
+          stroke="#4ADE80"
           strokeWidth="2.5"
-          markerEnd="url(#arrow-gold)"
+          markerEnd="url(#arrow-light)"
           className="draw-path d4"
         />
         {/* market -> feed & vet (reinvestment loop) */}
         <path
           d="M305,555 Q580,300 305,45"
-          stroke="#4C7A3D"
+          stroke="#10251A"
           strokeWidth="2"
           strokeDasharray="6 7"
-          markerEnd="url(#arrow-paddy)"
-          opacity="0.85"
+          markerEnd="url(#arrow-ink)"
+          opacity="0.55"
         />
       </svg>
 
       {/* Top: Feed & Vet */}
       <div className="absolute left-1/2 top-[6%] -translate-x-1/2 text-center fade-up" style={{ animationDelay: "0.1s" }}>
-        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-rust text-cream flex items-center justify-center font-mono text-[11px] mx-auto shadow-md">
+        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-brand-dark text-white flex items-center justify-center font-mono text-[11px] mx-auto shadow-md">
           FEED
         </div>
         <p className="mt-2 font-display font-semibold text-sm md:text-base text-ink">ফিড ও ঔষধ</p>
@@ -75,7 +75,7 @@ export default function CycleDiagram() {
 
       {/* Left: Aqua */}
       <div className="absolute left-[2%] top-1/2 -translate-y-1/2 text-center fade-up" style={{ animationDelay: "0.4s" }}>
-        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-teal text-cream flex items-center justify-center font-mono text-[11px] mx-auto shadow-md">
+        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-brand text-white flex items-center justify-center font-mono text-[11px] mx-auto shadow-md">
           AQUA
         </div>
         <p className="mt-2 font-display font-semibold text-sm md:text-base text-ink">পুকুর</p>
@@ -83,7 +83,7 @@ export default function CycleDiagram() {
 
       {/* Right: Poultry */}
       <div className="absolute right-[2%] top-1/2 -translate-y-1/2 text-center fade-up" style={{ animationDelay: "0.4s" }}>
-        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gold-dim text-cream flex items-center justify-center font-mono text-[11px] mx-auto shadow-md">
+        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-brand-light text-ink flex items-center justify-center font-mono text-[11px] mx-auto shadow-md">
           EGGS
         </div>
         <p className="mt-2 font-display font-semibold text-sm md:text-base text-ink">পোল্ট্রি</p>
@@ -91,7 +91,7 @@ export default function CycleDiagram() {
 
       {/* Bottom: Market */}
       <div className="absolute left-1/2 bottom-[4%] -translate-x-1/2 text-center fade-up" style={{ animationDelay: "0.7s" }}>
-        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-paddy text-cream flex items-center justify-center font-mono text-[10px] mx-auto shadow-md text-center leading-tight px-1">
+        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-ink text-white flex items-center justify-center font-mono text-[10px] mx-auto shadow-md text-center leading-tight px-1">
           DHAKA
         </div>
         <p className="mt-2 font-display font-semibold text-sm md:text-base text-ink">বাজার</p>
