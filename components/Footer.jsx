@@ -31,6 +31,15 @@ export default function Footer() {
           <p className="font-mono text-xs uppercase tracking-widest text-brand-light mb-3">যোগাযোগ</p>
           <ul className="space-y-2 text-sm text-white/70">
             <li>
+              <a
+                href="/visiting-card/agro-valley-group-visiting-card.pdf"
+                download="Agro-Valley-Group-Visiting-Card.pdf"
+                className="inline-flex items-center rounded-full border border-brand-light/60 px-4 py-2 text-brand-light hover:bg-brand-light hover:text-ink transition-colors"
+              >
+                ভিজিটিং কার্ড ডাউনলোড
+              </a>
+            </li>
+            <li>
               <a href="tel:+8801307085154" className="hover:text-white transition-colors">
                 +৮৮০ ১৩০৭-০৮৫১৫৪
               </a>
