@@ -70,8 +70,8 @@ export default function ContactPage() {
 
             <div>
               <p className="font-mono text-xs uppercase tracking-widest text-ink/50 mb-2">প্রোপ্রাইটর</p>
-              <p className="text-lg font-medium">Proprietor: Johurul Haque</p>
-              <p className="text-sm text-ink/60">স্বত্বাধিকারী: জহুরুল হক</p>
+              <p className="text-lg font-medium">Proprietor: Md. Johurul Haque</p>
+              <p className="text-sm text-ink/60">স্বত্বাধিকারী: মোঃ জহুরুল হক</p>
             </div>
           </div>
 

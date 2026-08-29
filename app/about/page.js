@@ -59,7 +59,7 @@ export default function AboutPage() {
               Group-এর প্রতিটি ইউনিট পরিচালিত হয়।
             </p>
             <p className="font-mono text-sm text-ink/50">
-              Proprietor: Johurul Haque &middot; স্বত্বাধিকারী: জহুরুল হক
+              Proprietor: Md. Johurul Haque &middot; স্বত্বাধিকারী: মোঃ জহুরুল হক
             </p>
           </div>
         </div>
