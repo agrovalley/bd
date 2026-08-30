@@ -1,9 +1,9 @@
 import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
-  title: "যোগাযোগ | Agro Valley Group",
+  title: "যোগাযোগ | Agro Valley Ltd",
   description:
-    "Agro Valley Group-এর সাথে যোগাযোগ করুন — ফোন, WhatsApp, ইমেইল অথবা ফর্মের মাধ্যমে। ঠিকানা: ঝালুকা, আমগাছী হাট-৬২৪০, দুর্গাপুর, রাজশাহী।",
+    "Agro Valley Ltd-এর সাথে যোগাযোগ করুন — ফোন, WhatsApp, ইমেইল অথবা ফর্মের মাধ্যমে। ঠিকানা: ঝালুকা, আমগাছী হাট-৬২৪০, দুর্গাপুর, রাজশাহী।",
 };
 
 export default function ContactPage() {

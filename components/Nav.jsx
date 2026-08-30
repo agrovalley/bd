@@ -33,7 +33,7 @@ export default function Nav() {
       <nav className="max-w-wrap mx-auto flex items-center justify-between px-6 py-4">
         <Link href="/" className="font-display font-bold text-lg tracking-tight text-ink shrink-0">
           Agro Valley
-          <span className="font-mono text-[10px] align-super ml-1 text-brand-dark">Group</span>
+          <span className="font-mono text-[10px] align-super ml-1 text-brand-dark">Ltd</span>
         </Link>
 
         <ul className="hidden lg:flex items-center gap-7 font-medium text-sm text-ink/80">

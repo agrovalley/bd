@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "পণ্য ক্যাটালগ | Agro Valley Group",
-  description: "Agro Valley Group-এর মাছ, ডিম, ফিড, ঔষধ ও ভেটেরিনারি সাপ্লাইয়ের পণ্য ক্যাটালগ।",
+  title: "পণ্য ক্যাটালগ | Agro Valley Ltd",
+  description: "Agro Valley Ltd-এর মাছ, ডিম, ফিড, ঔষধ ও ভেটেরিনারি সাপ্লাইয়ের পণ্য ক্যাটালগ।",
 };
 
 const catalog = [
@@ -52,7 +52,7 @@ const catalog = [
 ];
 
 function inquiryUrl(category) {
-  const message = encodeURIComponent(`আসসালামু আলাইকুম, Agro Valley Group-এর ${category} সম্পর্কে জানতে চাই।`);
+  const message = encodeURIComponent(`আসসালামু আলাইকুম, Agro Valley Ltd-এর ${category} সম্পর্কে জানতে চাই।`);
   return `https://wa.me/8801307085154?text=${message}`;
 }
 
@@ -62,9 +62,9 @@ export default function CatalogPage() {
       <section className="relative overflow-hidden pt-36 pb-20 md:pt-48 md:pb-28">
         <div className="absolute inset-0 -z-10 opacity-[0.07]" style={{ backgroundImage: "radial-gradient(circle at 15% 20%, #16A34A 0, transparent 42%), radial-gradient(circle at 85% 30%, #4ADE80 0, transparent 40%)" }} />
         <div className="max-w-wrap mx-auto px-6">
-          <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-4">Product Catalog · Agro Valley Group</p>
+          <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-4">Product Catalog · Agro Valley Ltd</p>
           <h1 className="font-display font-extrabold text-4xl md:text-6xl leading-tight max-w-3xl">আপনার প্রয়োজনের জন্য <span className="text-brand">সঠিক সমাধান।</span></h1>
-          <p className="mt-6 max-w-2xl text-lg text-ink/70 leading-relaxed">মাছ, ডিম, ফিড, ঔষধ ও ভেটেরিনারি সাপ্লাই—Agro Valley Group-এর সমন্বিত পণ্য ও সেবা এক জায়গায় দেখুন। মূল্য, স্টক ও পাইকারি কোটেশনের জন্য সরাসরি যোগাযোগ করুন।</p>
+          <p className="mt-6 max-w-2xl text-lg text-ink/70 leading-relaxed">মাছ, ডিম, ফিড, ঔষধ ও ভেটেরিনারি সাপ্লাই—Agro Valley Ltd-এর সমন্বিত পণ্য ও সেবা এক জায়গায় দেখুন। মূল্য, স্টক ও পাইকারি কোটেশনের জন্য সরাসরি যোগাযোগ করুন।</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="tel:+8801307085154" className="bg-brand text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-brand-dark transition-colors">ফোনে যোগাযোগ করুন</a>
             <Link href="/contact" className="border border-ink/20 px-6 py-3 rounded-full text-sm font-semibold hover:border-brand hover:text-brand transition-colors">অনুসন্ধান পাঠান</Link>

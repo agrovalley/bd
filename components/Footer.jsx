@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-ink text-white/80">
       <div className="max-w-wrap mx-auto px-6 py-12 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
         <div className="sm:col-span-2">
-          <p className="font-display font-bold text-xl text-white">Agro Valley Group</p>
+          <p className="font-display font-bold text-xl text-white">Agro Valley Ltd</p>
           <p className="mt-1 font-mono text-xs text-brand-light">Quality &middot; Care &middot; Supply</p>
           <p className="mt-2 text-xs text-white/50">
             Proprietor: Md. Johurul Haque &middot; স্বত্বাধিকারী: মোঃ জহুরুল হক
@@ -32,8 +32,8 @@ export default function Footer() {
           <ul className="space-y-2 text-sm text-white/70">
             <li>
               <a
-                href="/visiting-card/agro-valley-group-visiting-card.pdf"
-                download="Agro-Valley-Group-Visiting-Card.pdf"
+                href="/visiting-card/agro-valley-ltd-visiting-card.pdf"
+                download="Agro-Valley-Ltd-Visiting-Card.pdf"
                 className="inline-flex items-center rounded-full border border-brand-light/60 px-4 py-2 text-brand-light hover:bg-brand-light hover:text-ink transition-colors"
               >
                 ভিজিটিং কার্ড ডাউনলোড
@@ -82,7 +82,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="max-w-wrap mx-auto px-6 py-5 flex flex-col sm:flex-row gap-2 justify-between text-xs text-white/50 font-mono">
-          <span>&copy; {new Date().getFullYear()} Agro Valley Group. সর্বস্বত্ব সংরক্ষিত।</span>
+          <span>&copy; {new Date().getFullYear()} Agro Valley Ltd. সর্বস্বত্ব সংরক্ষিত।</span>
           <span>Aqua &middot; Poultry &middot; Agro-Vet</span>
         </div>
       </div>
