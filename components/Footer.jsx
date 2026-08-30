@@ -50,6 +50,16 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <a
+                href="https://t.me/+8801307085154"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-full border border-brand-light/60 px-3 py-1 text-xs text-brand-light hover:bg-brand-light hover:text-ink transition-colors"
+              >
+                Telegram
+              </a>
+            </li>
+            <li>
               <a href="mailto:johurul.bsc@gmail.com" className="hover:text-white transition-colors">
                 johurul.bsc@gmail.com
               </a>
