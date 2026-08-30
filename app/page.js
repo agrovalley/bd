@@ -24,7 +24,7 @@ export default function Home() {
             মাটি, পানি ও প্রাণীজ খাদ্যে একটি পূর্ণাঙ্গ চক্র।
           </h1>
           <p className="mt-6 max-w-xl text-ink/70 leading-relaxed fade-up" style={{ animationDelay: "0.2s" }}>
-            Agro Valley Ltd উৎপাদন থেকে সরবরাহ — পুরো শৃঙ্খলটি নিজেদের নিয়ন্ত্রণে
+            AgroValley Farms উৎপাদন থেকে সরবরাহ — পুরো শৃঙ্খলটি নিজেদের নিয়ন্ত্রণে
             পরিচালনা করে। Aqua, Poultry এবং Agro-Vet-এর মাধ্যমে আমরা স্বাস্থ্যকর
             উৎপাদন ও নির্ভরযোগ্য সরবরাহ নিশ্চিত করি।
           </p>
@@ -121,7 +121,7 @@ export default function Home() {
         <div className="max-w-wrap mx-auto px-6 grid md:grid-cols-3 gap-12">
           <div>
             <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-3">
-              Why Agro Valley Ltd
+              Why AgroValley Farms
             </p>
             <h2 className="font-display font-bold text-3xl leading-tight">
               কেন আমাদের
@@ -172,7 +172,7 @@ export default function Home() {
           </div>
           <div className="md:col-span-2">
             <p className="text-ink/75 leading-relaxed mb-6">
-              Agro Valley Ltd একটি সমন্বিত কৃষি প্রতিষ্ঠান, যা উৎপাদন থেকে সরবরাহ —
+              AgroValley Farms একটি সমন্বিত কৃষি প্রতিষ্ঠান, যা উৎপাদন থেকে সরবরাহ —
               পুরো শৃঙ্খলটি নিজেদের নিয়ন্ত্রণে পরিচালনা করে। প্রতিষ্ঠানটি তিনটি
               পরিপূরক ইউনিটে বিভক্ত এবং প্রতিটি ইউনিট একে অপরের সাথে সংযুক্ত।
             </p>

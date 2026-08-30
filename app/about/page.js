@@ -2,9 +2,9 @@ import CycleDiagram from "@/components/CycleDiagram";
 import ContactCTA from "@/components/ContactCTA";
 
 export const metadata = {
-  title: "পরিচিতি | Agro Valley Ltd",
+  title: "পরিচিতি | AgroValley Farms",
   description:
-    "Agro Valley Ltd সম্পর্কে জানুন — একটি সমন্বিত কৃষি প্রতিষ্ঠান, যেখানে মাছ চাষ, ডিম উৎপাদন এবং ফিড-ঔষধ সরবরাহ একই ব্যবস্থাপনার অধীনে পরিচালিত হয়।",
+    "AgroValley Farms সম্পর্কে জানুন — একটি সমন্বিত কৃষি প্রতিষ্ঠান, যেখানে মাছ চাষ, ডিম উৎপাদন এবং ফিড-ঔষধ সরবরাহ একই ব্যবস্থাপনার অধীনে পরিচালিত হয়।",
 };
 
 const STAGES = [
@@ -41,7 +41,7 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-2 space-y-5 text-ink/75 leading-relaxed">
             <p>
-              Agro Valley Ltd একটি সমন্বিত (integrated) কৃষি প্রতিষ্ঠান, যা উৎপাদন
+              AgroValley Farms একটি সমন্বিত (integrated) কৃষি প্রতিষ্ঠান, যা উৎপাদন
               থেকে সরবরাহ — পুরো শৃঙ্খলটি নিজেদের নিয়ন্ত্রণে পরিচালনা করে। প্রতিষ্ঠানটি
               তিনটি পরিপূরক ইউনিটে বিভক্ত — <strong>Aqua</strong> (মাছ চাষ),
               <strong> Poultry</strong> (ডিম উৎপাদন) এবং <strong>Agro-Vet</strong>

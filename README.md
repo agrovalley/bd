@@ -1,4 +1,4 @@
-# Agro Valley Ltd — ওয়েবসাইট
+# AgroValley Farms — ওয়েবসাইট
 
 Next.js (App Router) + Tailwind CSS দিয়ে তৈরি একটি আধুনিক, মোবাইল ও ল্যাপটপ —
 উভয়ের জন্য রেস্পন্সিভ, **মাল্টি-পেজ** ব্র্যান্ড সাইট। হোম, About, তিনটি ইউনিট
@@ -21,7 +21,7 @@ DevTools-এ device toolbar (Ctrl+Shift+M / Cmd+Shift+M) ব্যবহার �
 cd agro-valley
 git init
 git add .
-git commit -m "Agro Valley Ltd — multi-page website"
+git commit -m "AgroValley Farms — multi-page website"
 git branch -M main
 git remote add origin https://github.com/<আপনার-ইউজারনেম>/agro-valley.git
 git push -u origin main
