@@ -6,79 +6,94 @@
   --font-display: "Baloo Da 2", sans-serif;
   --font-body: "Hind Siliguri", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
+  --brand: #16A34A;
+  --brand-dark: #116B35;
+  --brand-light: #4ADE80;
+  --ink: #0F1F17;
 }
-
-* {
-  box-sizing: border-box;
-}
-
+* { box-sizing: border-box; }
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+  html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
+body { background: #fff; color: var(--ink); font-family: var(--font-body); line-height: 1.7; }
+::selection { background: var(--brand); color: #fff; }
+a:focus-visible, button:focus-visible { outline: 2.5px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
 
-body {
-  background-color: #FFFFFF;
-  color: #10251A;
-  font-family: var(--font-body);
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Hero mesh */
+.hero-mesh {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(22,163,74,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(74,222,128,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 60% 80%, rgba(17,107,53,0.05) 0%, transparent 50%);
 }
 
-::selection {
-  background-color: #16A34A;
-  color: #FFFFFF;
-}
+/* Gradient soft */
+.bg-gradient-soft { background: linear-gradient(180deg, #E8F5EE 0%, #F0F7F3 50%, #E8F5EE 100%); }
 
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid #16A34A;
-  outline-offset: 3px;
-  border-radius: 2px;
-}
+/* Card lift */
+.card-lift { transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s cubic-bezier(0.16,1,0.3,1); }
+.card-lift:hover { transform: translateY(-6px); box-shadow: 0 20px 50px -12px rgba(15,31,23,0.18); }
 
-/* subtle grain overlay used behind dark sections */
-.grain::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.05;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
+/* Button shine */
+.btn-shine { position: relative; overflow: hidden; }
+.btn-shine::after { content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.6s ease; }
+.btn-shine:hover::after { left: 100%; }
 
-/* draw-in animation for the cycle diagram strokes */
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
+/* Grain */
+.grain::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.04; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 
-.draw-path {
-  stroke-dasharray: 900;
-  stroke-dashoffset: 900;
-  animation: draw 2.4s ease-out forwards;
-}
+/* Draw animation */
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.draw-path { stroke-dasharray: 900; stroke-dashoffset: 900; }
+.draw-path.visible { animation: draw 2.4s ease-out forwards; }
+.draw-path.d2.visible { animation-delay: 0.3s; }
+.draw-path.d3.visible { animation-delay: 0.6s; }
+.draw-path.d4.visible { animation-delay: 0.9s; }
+.draw-path.d5.visible { animation-delay: 1.3s; }
 
-.draw-path.d2 { animation-delay: 0.3s; }
-.draw-path.d3 { animation-delay: 0.6s; }
-.draw-path.d4 { animation-delay: 0.9s; }
-.draw-path.d5 { animation-delay: 1.3s; }
+/* Fade up */
+@keyframes fade-up { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.fade-up { animation: fade-up 0.8s cubic-bezier(0.16,1,0.3,1) both; }
 
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a1a1a1; }
 
-.fade-up {
-  animation: fade-up 0.7s ease-out both;
-}
+/* Number accent */
+.number-accent { font-family: var(--font-mono); background: linear-gradient(135deg, var(--brand), var(--brand-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+/* Tags */
+.tag { @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium tracking-wide; }
+.tag-brand { @apply bg-brand/10 text-brand-dark border border-brand/20; }
+
+/* Section label */
+.section-label { @apply font-mono text-[11px] tracking-[0.25em] uppercase; }
+
+/* Inputs */
+.input-enhanced { @apply w-full bg-white/50 border border-ink/10 rounded-xl px-4 py-3.5 text-sm placeholder:text-ink/40 transition-all duration-300 outline-none focus:border-brand/50 focus:ring-4 focus:ring-brand/10 focus:bg-white hover:border-ink/20; }
+
+/* Status badges */
+.status-badge { @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium; }
+.status-success { @apply bg-emerald-50 text-emerald-700 border border-emerald-200; }
+.status-error { @apply bg-red-50 text-red-700 border border-red-200; }
+.status-loading { @apply bg-amber-50 text-amber-700 border border-amber-200; }
