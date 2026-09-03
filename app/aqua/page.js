@@ -12,9 +12,9 @@ export const metadata = {
 export default function AquaPage() {
   return (
     <main>
-      <section className="pt-36 md:pt-44 pb-4">
+      <section className="division-page-wrapper">
         <div className="max-w-wrap mx-auto px-6">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm text-ink/50 hover:text-brand-dark transition-colors bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full border border-ink/10 hover:border-brand/30">← হোমে ফিরুন</Link>
+          <Link href="/" className="division-home-link inline-flex items-center gap-2 text-xs md:text-sm text-ink/50 hover:text-brand-dark transition-colors bg-white/50 backdrop-blur-sm px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-ink/10 hover:border-brand/30">← হোমে ফিরুন</Link>
         </div>
       </section>
       <DivisionBand id="aqua" eyebrow="Division 01 — Commercial Fish Farming" title="Agro Valley Aqua" englishName="Commercial fish farming" description="একাধিক পুকুরে রুই, কাতলা, পাঙ্গাশ ও তেলাপিয়াসহ বিভিন্ন প্রজাতির মাছ বাণিজ্যিকভাবে উৎপাদন করে ঢাকা ও দেশব্যাপী পাইকারি সরবরাহ করা হয়।" points={["বাণিজ্যিক ভিত্তিতে একাধিক পুকুরে মাছ চাষ","রুই, কাতলা, পাঙ্গাশ ও তেলাপিয়াসহ বিভিন্ন প্রজাতির মাছ উৎপাদন","ঢাকা ও দেশের বিভিন্ন অঞ্চলে পাইকারি সরবরাহ","খুচরা ক্রেতা ও আড়তদারদের জন্য চাহিদামাফিক সরবরাহ","নিজস্ব ফিড ও পরিচর্যা ব্যবস্থাপনার মাধ্যমে উৎপাদন"]} illustration={<UnitPhoto src="/images/aqua-harvest.jpg" alt="Agro Valley Aqua — পুকুর থেকে মাছ সংগ্রহ" priority />} />
