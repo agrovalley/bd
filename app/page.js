@@ -3,182 +3,85 @@ import UnitPreviewCard from "@/components/UnitPreviewCard";
 import ContactCTA from "@/components/ContactCTA";
 import Link from "next/link";
 import UnitPhoto from "@/components/UnitPhoto";
+import { PondIllustration, PoultryIllustration, FeedIllustration } from "@/components/Illustrations";
 
 export default function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="relative pt-36 pb-24 md:pt-48 md:pb-32 overflow-hidden">
-        <div
-          className="absolute inset-0 -z-10 opacity-[0.06]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 20% 20%, #16A34A 0, transparent 45%), radial-gradient(circle at 85% 15%, #116B35 0, transparent 40%), radial-gradient(circle at 60% 90%, #4ADE80 0, transparent 45%)",
-          }}
-        />
-        <div className="max-w-wrap mx-auto px-6">
-          <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-5 fade-up">
-            Integrated Agro Enterprise · Bangladesh
-          </p>
-          <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl leading-[1.15] max-w-3xl text-ink fade-up" style={{ animationDelay: "0.1s" }}>
-            মাটি, পানি ও প্রাণীজ খাদ্যে একটি পূর্ণাঙ্গ চক্র।
-          </h1>
-          <p className="mt-6 max-w-xl text-ink/70 leading-relaxed fade-up" style={{ animationDelay: "0.2s" }}>
-            AgroValley Farms উৎপাদন থেকে সরবরাহ — পুরো শৃঙ্খলটি নিজেদের নিয়ন্ত্রণে
-            পরিচালনা করে। Aqua, Poultry এবং Agro-Vet-এর মাধ্যমে আমরা স্বাস্থ্যকর
-            উৎপাদন ও নির্ভরযোগ্য সরবরাহ নিশ্চিত করি।
-          </p>
-
-          <div className="mt-9 flex flex-wrap gap-4 fade-up" style={{ animationDelay: "0.3s" }}>
-            <Link href="/contact" className="bg-brand text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-brand-dark transition-colors">
-              ব্যবসায়িক যোগাযোগ
-            </Link>
-            <Link href="/about" className="border border-ink/20 px-6 py-3 rounded-full text-sm font-medium hover:border-ink/50 transition-colors">
-              প্রতিষ্ঠান সম্পর্কে জানুন
-            </Link>
-          </div>
-
-          <div className="mt-14 flex flex-wrap gap-3 fade-up" style={{ animationDelay: "0.4s" }}>
-            {[
-              { label: "Agro Valley Aqua", href: "/aqua" },
-              { label: "Agro Valley Poultry", href: "/poultry" },
-              { label: "Agro Valley Agro-Vet", href: "/agro-vet" },
-            ].map((b) => (
-              <Link
-                key={b.label}
-                href={b.href}
-                className="font-mono text-xs px-4 py-2 rounded-full border border-brand/30 text-brand-dark hover:bg-soft transition-colors"
-              >
-                {b.label}
-              </Link>
-            ))}
+      <section className="relative pt-40 pb-28 md:pt-52 md:pb-40 overflow-hidden hero-mesh">
+        <div className="max-w-wrap mx-auto px-6 relative z-10">
+          <div className="reveal">
+            <p className="font-mono text-xs tracking-[0.3em] uppercase text-brand-dark mb-6 flex items-center gap-3">
+              <span className="w-8 h-px bg-brand-dark" />Integrated Agro Enterprise · Bangladesh
+            </p>
+            <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] max-w-4xl text-ink">
+              মাটি, পানি ও প্রাণীজ খাদ্যে একটি পূর্ণাঙ্গ চক্র।
+            </h1>
+            <p className="mt-8 max-w-xl text-lg text-ink/60 leading-relaxed">
+              AgroValley Farms উৎপাদন থেকে সরবরাহ — পুরো শৃঙ্খলটি নিজেদের নিয়ন্ত্রণে পরিচালনা করে। Aqua, Poultry এবং Agro-Vet-এর মাধ্যমে আমরা স্বাস্থ্যকর উৎপাদন ও নির্ভরযোগ্য সরবরাহ নিশ্চিত করি।
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link href="/contact" className="bg-brand text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-brand-dark transition-all duration-300 shadow-soft hover:shadow-medium hover:-translate-y-0.5 btn-shine">ব্যবসায়িক যোগাযোগ</Link>
+              <Link href="/about" className="border border-ink/15 bg-white/50 backdrop-blur-sm px-8 py-4 rounded-full text-sm font-semibold hover:border-brand/40 hover:text-brand-dark transition-all duration-300">প্রতিষ্ঠান সম্পর্কে জানুন</Link>
+            </div>
+            <div className="mt-12 flex flex-wrap gap-3">
+              {[{label:"Agro Valley Aqua",href:"/aqua"},{label:"Agro Valley Poultry",href:"/poultry"},{label:"Agro Valley Agro-Vet",href:"/agro-vet"}].map((b,i)=>(
+                <Link key={b.label} href={b.href} className="font-mono text-xs px-5 py-2.5 rounded-full border border-brand/20 text-brand-dark bg-brand/5 hover:bg-brand hover:text-white hover:border-brand transition-all duration-300">{b.label}</Link>
+              ))}
+            </div>
           </div>
         </div>
+        <div className="absolute top-20 right-10 w-20 h-20 rounded-full bg-brand/5 blur-xl animate-float hidden lg:block" />
+        <div className="absolute bottom-20 left-10 w-32 h-32 rounded-full bg-brand-light/5 blur-2xl animate-float hidden lg:block" style={{animationDelay:"2s"}} />
       </section>
 
-      {/* CYCLE DIAGRAM — signature element */}
-      <section className="bg-soft py-20 md:py-28 border-y border-ink/10">
-        <div className="max-w-wrap mx-auto px-6 text-center">
-          <p className="font-mono text-xs tracking-[0.25em] uppercase text-ink/50 mb-3">
-            সমন্বিত উৎপাদন ও সরবরাহ
-          </p>
-          <h2 className="font-display font-bold text-2xl md:text-3xl max-w-xl mx-auto mb-14">
-            যা আমরা উৎপাদন করি, তা দিয়েই আমরা পুষ্টি জোগাই — বাকিটা পৌঁছে যায় বাজারে
-          </h2>
-          <CycleDiagram />
-          <p className="mt-14 max-w-lg mx-auto text-sm text-ink/60 leading-relaxed">
-            Agro-Vet ইউনিটের ফিড ও ভেটেরিনারি পণ্য Aqua এবং Poultry ইউনিটের নিজস্ব
-            খামারে ব্যবহৃত হয়। উৎপাদিত মাছ ও ডিম ঢাকাসহ দেশের বিভিন্ন অঞ্চলে
-            সরবরাহ করা হয় — এই সমন্বিত মডেল উৎপাদন, মান নিয়ন্ত্রণ ও সরবরাহকে একই
-            চক্রে যুক্ত করে।
-          </p>
+      {/* CYCLE DIAGRAM */}
+      <section className="bg-gradient-soft py-24 md:py-32 border-y border-ink/5 relative overflow-hidden">
+        <div className="max-w-wrap mx-auto px-6 text-center relative z-10">
+          <div className="reveal">
+            <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-4 flex items-center justify-center gap-3"><span className="w-8 h-px bg-brand/40" />Integrated Operating Model<span className="w-8 h-px bg-brand/40" /></p>
+            <h2 className="font-display font-bold text-3xl md:text-4xl max-w-2xl mx-auto mb-4">উৎপাদন থেকে বাজার — একই ছাদের নিচে।</h2>
+            <p className="text-ink/50 max-w-lg mx-auto mb-16">তিনটি ইউনিট একে অপরকে সম্পূরক করে একটি টেকসই কৃষি ব্যবস্থা গড়ে তোলে।</p>
+          </div>
+          <div className="reveal reveal-delay-2"><CycleDiagram /></div>
         </div>
       </section>
 
       {/* UNIT PREVIEWS */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 bg-surface">
         <div className="max-w-wrap mx-auto px-6">
-          <div className="max-w-xl mb-14">
-            <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-3">
-              Our Units
-            </p>
-            <h2 className="font-display font-bold text-3xl md:text-4xl leading-tight">
-              তিনটি ইউনিট, একটি লক্ষ্য।
-            </h2>
+          <div className="text-center mb-16 reveal">
+            <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-4">Our Divisions</p>
+            <h2 className="font-display font-bold text-3xl md:text-4xl mb-4">তিনটি ইউনিট, একটি লক্ষ্য।</h2>
+            <p className="text-ink/50 max-w-lg mx-auto">প্রতিটি ইউনিট আলাদা আলাদা পরিচালিত হলেও সবগুলো একই মান ও নীতির উপর ভিত্তি করে চলে।</p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <UnitPreviewCard
-              href="/aqua"
-              eyebrow="Division 01"
-              title="Agro Valley Aqua"
-              englishName="Commercial fish farming"
-              description="একাধিক পুকুরে রুই, কাতলা, পাঙ্গাশ ও তেলাপিয়াসহ বিভিন্ন প্রজাতির মাছ চাষ ও পাইকারি সরবরাহ।"
-              illustration={<UnitPhoto src="/images/aqua-harvest.jpg" alt="পুকুর থেকে মাছ সংগ্রহ" />}
-            />
-            <UnitPreviewCard
-              href="/poultry"
-              eyebrow="Division 02"
-              title="Agro Valley Poultry"
-              englishName="Fresh egg production"
-              description="বড় পরিসরে লেয়ার মুরগি পালন ও নিয়মিত তাজা ডিম উৎপাদন-সরবরাহ।"
-              illustration={<UnitPhoto src="/images/poultry-farm.jpg" alt="লেয়ার মুরগির খামার" />}
-            />
-            <UnitPreviewCard
-              href="/agro-vet"
-              eyebrow="Division 03"
-              title="Agro Valley Agro-Vet"
-              englishName="Feed & veterinary supply"
-              description="মাছ ও পোল্ট্রির ফিড, ঔষধ ও সাপ্লিমেন্টের খুচরা ও পাইকারি ডিলারশিপ।"
-              illustration={<UnitPhoto src="/images/agro-valley-shop.jpg" alt="Agro Valley Agro-Vet শোরুম" />}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* WHY CHOOSE US */}
-      <section className="bg-soft py-24 md:py-28">
-        <div className="max-w-wrap mx-auto px-6 grid md:grid-cols-3 gap-12">
-          <div>
-            <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-3">
-              Why AgroValley Farms
-            </p>
-            <h2 className="font-display font-bold text-3xl leading-tight">
-              কেন আমাদের
-              <br />
-              বেছে নেবেন।
-            </h2>
-          </div>
-          <div className="md:col-span-2 grid sm:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {[
-              {
-                title: "সমন্বিত সরবরাহ চক্র",
-                desc: "উৎপাদন থেকে বাজারজাতকরণ পর্যন্ত পুরো প্রক্রিয়া নিজেদের নিয়ন্ত্রণে, তাই মান বজায় রাখা সহজ হয়।",
-              },
-              {
-                title: "নিজস্ব ফিড ও ঔষধ",
-                desc: "নিজস্ব Agro-Vet ইউনিটের ফিড ও ঔষধ দিয়েই খামার পরিচালিত হয়, যা উৎপাদনের মান নিশ্চিত করে।",
-              },
-              {
-                title: "দেশব্যাপী সরবরাহ",
-                desc: "ঢাকাসহ দেশের বিভিন্ন অঞ্চলে পাইকারি ও খুচরা ক্রেতাদের চাহিদামাফিক সরবরাহ।",
-              },
-              {
-                title: "সরাসরি যোগাযোগ",
-                desc: "ফোন, ইমেইল বা WhatsApp-এ সরাসরি প্রতিষ্ঠানের সাথে যোগাযোগের সুযোগ।",
-              },
-            ].map((item) => (
-              <div key={item.title}>
-                <h3 className="font-display font-semibold text-lg mb-2 text-ink">{item.title}</h3>
-                <p className="text-sm text-ink/70 leading-relaxed">{item.desc}</p>
-              </div>
+              {href:"/aqua",eyebrow:"Division 01",title:"Agro Valley Aqua",englishName:"Commercial fish farming",description:"একাধিক পুকুরে রুই, কাতলা, পাঙ্গাশ ও তেলাপিয়াসহ বিভিন্ন প্রজাতির মাছ বাণিজ্যিকভাবে উৎপাদন ও পাইকারি সরবরাহ।",illustration:<PondIllustration />,cta:"Aqua বিস্তারিত"},
+              {href:"/poultry",eyebrow:"Division 02",title:"Agro Valley Poultry",englishName:"Fresh egg production",description:"বড় পরিসরে লেয়ার মুরগি পালন এবং আড়ত, দোকান ও পরিবেশক পর্যায়ে নিয়মিত তাজা ডিম সরবরাহ।",illustration:<PoultryIllustration />,cta:"Poultry বিস্তারিত"},
+              {href:"/agro-vet",eyebrow:"Division 03",title:"Agro Valley Agro-Vet",englishName:"Feed & veterinary supply",description:"মাছ ও পোল্ট্রি ফিড, ঔষধ, ভ্যাকসিন, ভিটামিন, মিনারেল প্রিমিক্সের খুচরা ও পাইকারি ডিলারশিপ।",illustration:<FeedIllustration />,cta:"Agro-Vet বিস্তারিত"},
+            ].map((card,i)=> (
+              <div key={card.href} className={`reveal`} style={{transitionDelay:`${200+i*150}ms`}}><UnitPreviewCard {...card} /></div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ABOUT TEASER */}
-      <section className="py-24 md:py-28">
-        <div className="max-w-wrap mx-auto px-6 grid md:grid-cols-3 gap-12 items-start">
-          <div>
-            <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-3">
-              About Us
-            </p>
-            <h2 className="font-display font-bold text-3xl leading-tight">
-              একটি প্রতিষ্ঠান,
-              <br />
-              তিনটি স্তম্ভ।
-            </h2>
-          </div>
-          <div className="md:col-span-2">
-            <p className="text-ink/75 leading-relaxed mb-6">
-              AgroValley Farms একটি সমন্বিত কৃষি প্রতিষ্ঠান, যা উৎপাদন থেকে সরবরাহ —
-              পুরো শৃঙ্খলটি নিজেদের নিয়ন্ত্রণে পরিচালনা করে। প্রতিষ্ঠানটি তিনটি
-              পরিপূরক ইউনিটে বিভক্ত এবং প্রতিটি ইউনিট একে অপরের সাথে সংযুক্ত।
-            </p>
-            <Link href="/about" className="inline-flex items-center gap-2 text-sm font-medium text-brand-dark">
-              পূর্ণ পরিচিতি পড়ুন <span aria-hidden="true">→</span>
-            </Link>
+      {/* PHOTO GRID */}
+      <section className="py-24 md:py-32 border-t border-ink/5">
+        <div className="max-w-wrap mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="reveal">
+              <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-4">On the Ground</p>
+              <h2 className="font-display font-bold text-3xl md:text-4xl mb-6 leading-tight">মাঠ পর্যায়ে আমাদের কার্যক্রম।</h2>
+              <p className="text-ink/60 leading-relaxed mb-8">আমাদের প্রতিষ্ঠানের প্রতিটি ইউনিট সরাসরি মাঠ পর্যায়ে কাজ করে। পুকুর থেকে শুরু করে খামার এবং সরবরাহ কেন্দ্র — সবকিছুই নিজস্ব তত্ত্বাবধানে পরিচালিত হয়।</p>
+              <Link href="/catalog" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-dark hover:text-brand transition-colors group">পণ্য ক্যাটালগ দেখুন<span className="group-hover:translate-x-1 transition-transform">→</span></Link>
+            </div>
+            <div className="grid grid-cols-2 gap-4 reveal reveal-delay-2">
+              <div className="space-y-4"><UnitPhoto src="/images/aqua-harvest.jpg" alt="পুকুর থেকে মাছ সংগ্রহ" /><UnitPhoto src="/images/poultry-farm.jpg" alt="লেয়ার মুরগির খামার" /></div>
+              <div className="pt-8"><UnitPhoto src="/images/agro-valley-shop.jpg" alt="Agro-Vet শোরুম" /></div>
+            </div>
           </div>
         </div>
       </section>
