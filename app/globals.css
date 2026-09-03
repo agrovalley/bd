@@ -29,14 +29,14 @@ body { background: #fff; color: var(--ink); font-family: var(--font-body); line-
 ::selection { background: var(--brand); color: #fff; }
 a:focus-visible, button:focus-visible { outline: 2.5px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
 
-/* Scroll reveal: content remains visible if client-side animation cannot start */
+/* Scroll reveal: progressive enhancement — content stays visible if JS or the observer is delayed */
 .reveal { opacity: 1; transform: none; transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
-html.js .reveal { opacity: 0; transform: translateY(30px); }
-html.js .reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
+html.js .reveal.visible { animation: reveal-in 0.8s cubic-bezier(0.16,1,0.3,1) both; }
+.reveal-delay-1 { animation-delay: 0.1s; }
+.reveal-delay-2 { animation-delay: 0.2s; }
+.reveal-delay-3 { animation-delay: 0.3s; }
+.reveal-delay-4 { animation-delay: 0.4s; }
+@keyframes reveal-in { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 
 /* Hero mesh */
 .hero-mesh {
@@ -61,10 +61,9 @@ html.js .reveal.visible { opacity: 1; transform: translateY(0); }
 /* Grain */
 .grain::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.04; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 
-/* Draw animation */
+/* Draw animation: keep the diagram visible if JavaScript is delayed */
 @keyframes draw { to { stroke-dashoffset: 0; } }
 .draw-path { stroke-dasharray: 900; stroke-dashoffset: 0; }
-html.js .draw-path { stroke-dashoffset: 900; }
 html.js .draw-path.visible { animation: draw 2.4s ease-out forwards; }
 .draw-path.d2.visible { animation-delay: 0.3s; }
 .draw-path.d3.visible { animation-delay: 0.6s; }
@@ -93,6 +92,15 @@ html.js .draw-path.visible { animation: draw 2.4s ease-out forwards; }
 
 /* Inputs */
 .input-enhanced { @apply w-full bg-white/50 border border-ink/10 rounded-xl px-4 py-3.5 text-sm placeholder:text-ink/40 transition-all duration-300 outline-none focus:border-brand/50 focus:ring-4 focus:ring-brand/10 focus:bg-white hover:border-ink/20; }
+
+/* Laptop-friendly layout and interaction polish */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .max-w-wrap { max-width: 1120px; }
+  nav a, nav button { white-space: nowrap; }
+}
+@media (min-width: 1280px) {
+  .max-w-wrap { max-width: 1200px; }
+}
 
 /* Status badges */
 .status-badge { @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium; }
