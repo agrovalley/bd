@@ -10,8 +10,8 @@ const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variabl
 
 export const metadata = {
   metadataBase: new URL("https://avg.vercel.app"),
-  title: "AgroValley Farms | Integrated Agro Enterprise",
-  description: "AgroValley Farms — মাছ চাষ, ডিম উৎপাদন এবং ফিড ও ভেটেরিনারি সাপ্লাইয়ের সমন্বিত কৃষি প্রতিষ্ঠান। রাজশাহী, বাংলাদেশ।",
+  title: "Agro Valley Farms | Growing good, together",
+  description: "Agro Valley Farms — মাছ, ডিম এবং খামারের প্রয়োজনীয় সরবরাহকে একসঙ্গে নিয়ে তৈরি একটি সমন্বিত কৃষি প্রতিষ্ঠান। রাজশাহী, বাংলাদেশ।",
   keywords: ["Agro Valley", "AgroValley Farms", "মাছ চাষ", "পোল্ট্রি ফার্ম", "ফিড ডিলার", "রাজশাহী"],
   verification: { google: "hr8UjF9EGogsrKMyCSQ7BeInsejd8gMWBI9oci_Jvno" },
   alternates: { canonical: "/" },

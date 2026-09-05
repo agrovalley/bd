@@ -1,92 +1,191 @@
-import CycleDiagram from "@/components/CycleDiagram";
-import UnitPreviewCard from "@/components/UnitPreviewCard";
-import ContactCTA from "@/components/ContactCTA";
 import Link from "next/link";
-import UnitPhoto from "@/components/UnitPhoto";
-import { PondIllustration, PoultryIllustration, FeedIllustration } from "@/components/Illustrations";
+
+const divisions = [
+  {
+    number: "01",
+    title: "Aqua",
+    subtitle: "মাছ উৎপাদন",
+    body: "দায়িত্বশীল চাষ, স্বাস্থ্যকর পানি এবং নিয়মিত সরবরাহ—পুকুর থেকে বাজার পর্যন্ত।",
+    href: "/aqua",
+    tone: "moss",
+  },
+  {
+    number: "02",
+    title: "Poultry",
+    subtitle: "ডিম উৎপাদন",
+    body: "মানসম্মত লেয়ার ফার্ম থেকে প্রতিদিনের তাজা ডিম, নির্ভরযোগ্যভাবে।",
+    href: "/poultry",
+    tone: "sun",
+  },
+  {
+    number: "03",
+    title: "Agro-Vet",
+    subtitle: "ফিড ও ভেটেরিনারি",
+    body: "ফিড, ভ্যাকসিন, ওষুধ ও খামার-পরামর্শ—একটি সমন্বিত সাপ্লাই নেটওয়ার্ক।",
+    href: "/agro-vet",
+    tone: "clay",
+  },
+];
+
+const signals = [
+  ["৩", "মূল ব্যবসায়িক ইউনিট"],
+  ["২৪/৭", "খামার পর্যবেক্ষণ"],
+  ["১", "সমন্বিত সাপ্লাই চেইন"],
+];
 
 export default function Home() {
   return (
-    <main>
-      {/* HERO */}
-      <section className="relative pt-40 pb-28 md:pt-52 md:pb-40 overflow-hidden hero-mesh">
-        <div className="max-w-wrap mx-auto px-6 relative z-10">
-          <div className="reveal">
-            <p className="font-mono text-xs tracking-[0.3em] uppercase text-brand-dark mb-6 flex items-center gap-3">
-              <span className="w-8 h-px bg-brand-dark" />Integrated Agro Enterprise · Bangladesh
-            </p>
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] max-w-4xl text-ink">
-              মাটি, পানি ও প্রাণীজ খাদ্যে একটি পূর্ণাঙ্গ চক্র।
-            </h1>
-            <p className="mt-8 max-w-xl text-lg text-ink/60 leading-relaxed">
-              AgroValley Farms উৎপাদন থেকে সরবরাহ — পুরো শৃঙ্খলটি নিজেদের নিয়ন্ত্রণে পরিচালনা করে। Aqua, Poultry এবং Agro-Vet-এর মাধ্যমে আমরা স্বাস্থ্যকর উৎপাদন ও নির্ভরযোগ্য সরবরাহ নিশ্চিত করি।
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/contact" className="bg-brand text-white px-8 py-4 rounded-full text-sm font-semibold hover:bg-brand-dark transition-all duration-300 shadow-soft hover:shadow-medium hover:-translate-y-0.5 btn-shine">ব্যবসায়িক যোগাযোগ</Link>
-              <Link href="/about" className="border border-ink/15 bg-white/50 backdrop-blur-sm px-8 py-4 rounded-full text-sm font-semibold hover:border-brand/40 hover:text-brand-dark transition-all duration-300">প্রতিষ্ঠান সম্পর্কে জানুন</Link>
+    <main className="overflow-hidden">
+      <section className="hero-section relative">
+        <div className="hero-orbit hero-orbit-one" />
+        <div className="hero-orbit hero-orbit-two" />
+        <div className="max-w-wrap mx-auto px-6 pt-28 pb-14 md:pt-36 md:pb-20 lg:pt-40 lg:pb-24">
+          <div className="grid items-end gap-12 lg:grid-cols-[1.02fr_.98fr] lg:gap-16">
+            <div className="relative z-10 max-w-2xl">
+              <div className="eyebrow mb-7 animate-fade-up">
+                <span className="eyebrow-mark" />
+                <span>Integrated agro enterprise · Rajshahi</span>
+              </div>
+              <h1 className="hero-title animate-fade-up [animation-delay:120ms]">
+                খাবারের শুরুটা<br />
+                <em>ভালো মাটি</em> থেকে।
+              </h1>
+              <p className="hero-copy animate-fade-up [animation-delay:220ms]">
+                Agro Valley মাছ, ডিম এবং খামারের প্রয়োজনীয় সরবরাহকে একসঙ্গে নিয়ে তৈরি করছে বাংলাদেশের জন্য আরও যত্নশীল একটি কৃষি চক্র।
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-4 animate-fade-up [animation-delay:320ms]">
+                <Link href="/contact" className="button-primary">
+                  ব্যবসায়িক যোগাযোগ <span aria-hidden="true">↗</span>
+                </Link>
+                <Link href="#divisions" className="button-quiet">
+                  আমাদের কাজ দেখুন <span aria-hidden="true">↓</span>
+                </Link>
+              </div>
+              <div className="mt-14 grid max-w-lg grid-cols-3 border-t border-ink/15 pt-5 animate-fade-up [animation-delay:420ms]">
+                {signals.map(([value, label]) => (
+                  <div key={label} className="pr-4">
+                    <div className="signal-value">{value}</div>
+                    <div className="signal-label">{label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="mt-12 flex flex-wrap gap-3">
-              {[{label:"Agro Valley Aqua",href:"/aqua"},{label:"Agro Valley Poultry",href:"/poultry"},{label:"Agro Valley Agro-Vet",href:"/agro-vet"}].map((b,i)=>(
-                <Link key={b.label} href={b.href} className="font-mono text-xs px-5 py-2.5 rounded-full border border-brand/20 text-brand-dark bg-brand/5 hover:bg-brand hover:text-white hover:border-brand transition-all duration-300">{b.label}</Link>
-              ))}
+
+            <div className="hero-visual relative animate-fade-up [animation-delay:180ms]">
+              <div className="hero-photo-frame">
+                <img src="/images/aqua-harvest.jpg" alt="Agro Valley fish harvest" className="hero-photo" />
+                <div className="hero-photo-shade" />
+                <div className="hero-photo-caption">
+                  <span className="caption-dot" />
+                  <span>On the ground · 2024</span>
+                </div>
+              </div>
+              <div className="hero-note hero-note-top">
+                <span className="hero-note-kicker">Built around</span>
+                <strong>একটি পূর্ণাঙ্গ চক্র</strong>
+              </div>
+              <div className="hero-note hero-note-bottom">
+                <span className="hero-note-kicker">Our promise</span>
+                <strong>ভালো উৎপাদন, ভালো জীবন</strong>
+              </div>
+              <div className="hero-stamp" aria-hidden="true">
+                <span>EST.</span>
+                <b>AV</b>
+                <span>2018</span>
+              </div>
             </div>
           </div>
         </div>
-        <div className="absolute top-20 right-10 w-20 h-20 rounded-full bg-brand/5 blur-xl animate-float hidden lg:block" />
-        <div className="absolute bottom-20 left-10 w-32 h-32 rounded-full bg-brand-light/5 blur-2xl animate-float hidden lg:block" style={{animationDelay:"2s"}} />
-      </section>
-
-      {/* CYCLE DIAGRAM */}
-      <section className="bg-gradient-soft py-24 md:py-32 border-y border-ink/5 relative overflow-hidden">
-        <div className="max-w-wrap mx-auto px-6 text-center relative z-10">
-          <div className="reveal">
-            <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-4 flex items-center justify-center gap-3"><span className="w-8 h-px bg-brand/40" />Integrated Operating Model<span className="w-8 h-px bg-brand/40" /></p>
-            <h2 className="font-display font-bold text-3xl md:text-4xl max-w-2xl mx-auto mb-4">উৎপাদন থেকে বাজার — একই ছাদের নিচে।</h2>
-            <p className="text-ink/50 max-w-lg mx-auto mb-16">তিনটি ইউনিট একে অপরকে সম্পূরক করে একটি টেকসই কৃষি ব্যবস্থা গড়ে তোলে।</p>
-          </div>
-          <div className="reveal reveal-delay-2"><CycleDiagram /></div>
+        <div className="hero-baseline" aria-hidden="true">
+          <span>01 / 04</span>
+          <span className="baseline-line" />
+          <span>Scroll to explore</span>
         </div>
       </section>
 
-      {/* UNIT PREVIEWS */}
-      <section className="py-24 md:py-32 bg-surface">
+      <section className="manifesto-section">
         <div className="max-w-wrap mx-auto px-6">
-          <div className="text-center mb-16 reveal">
-            <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-4">Our Divisions</p>
-            <h2 className="font-display font-bold text-3xl md:text-4xl mb-4">তিনটি ইউনিট, একটি লক্ষ্য।</h2>
-            <p className="text-ink/50 max-w-lg mx-auto">প্রতিটি ইউনিট আলাদা আলাদা পরিচালিত হলেও সবগুলো একই মান ও নীতির উপর ভিত্তি করে চলে।</p>
+          <div className="grid gap-10 lg:grid-cols-[.32fr_1fr] lg:gap-20">
+            <div className="section-index">01 <span>—</span> WHY AGRO VALLEY</div>
+            <div className="max-w-4xl">
+              <p className="manifesto-lead">আমরা আলাদা আলাদা পণ্য বিক্রি করি না। আমরা তৈরি করি <span>সম্পর্কিত একটি উৎপাদন ব্যবস্থা</span>—যেখানে পানি, প্রাণী এবং মানুষের যত্ন একসঙ্গে কাজ করে।</p>
+              <div className="mt-10 grid gap-8 border-t border-ink/15 pt-7 sm:grid-cols-2">
+                <div>
+                  <div className="mini-label">01 / Care</div>
+                  <p className="mt-3 max-w-sm text-sm leading-7 text-ink/65">প্রতিটি ইউনিটে স্বাস্থ্য, নিরাপত্তা এবং দীর্ঘমেয়াদি স্থায়িত্বকে প্রথমে রাখা হয়।</p>
+                </div>
+                <div>
+                  <div className="mini-label">02 / Continuity</div>
+                  <p className="mt-3 max-w-sm text-sm leading-7 text-ink/65">উৎপাদন থেকে সরবরাহ—একটি টিম, একটি মান, একটি নির্ভরযোগ্য প্রতিশ্রুতি।</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {[
-              {href:"/aqua",eyebrow:"Division 01",title:"Agro Valley Aqua",englishName:"Commercial fish farming",description:"একাধিক পুকুরে রুই, কাতলা, পাঙ্গাশ ও তেলাপিয়াসহ বিভিন্ন প্রজাতির মাছ বাণিজ্যিকভাবে উৎপাদন ও পাইকারি সরবরাহ।",illustration:<PondIllustration />,cta:"Aqua বিস্তারিত"},
-              {href:"/poultry",eyebrow:"Division 02",title:"Agro Valley Poultry",englishName:"Fresh egg production",description:"বড় পরিসরে লেয়ার মুরগি পালন এবং আড়ত, দোকান ও পরিবেশক পর্যায়ে নিয়মিত তাজা ডিম সরবরাহ।",illustration:<PoultryIllustration />,cta:"Poultry বিস্তারিত"},
-              {href:"/agro-vet",eyebrow:"Division 03",title:"Agro Valley Agro-Vet",englishName:"Feed & veterinary supply",description:"মাছ ও পোল্ট্রি ফিড, ঔষধ, ভ্যাকসিন, ভিটামিন, মিনারেল প্রিমিক্সের খুচরা ও পাইকারি ডিলারশিপ।",illustration:<FeedIllustration />,cta:"Agro-Vet বিস্তারিত"},
-            ].map((card,i)=> (
-              <div key={card.href} className={`reveal`} style={{transitionDelay:`${200+i*150}ms`}}><UnitPreviewCard {...card} /></div>
+        </div>
+      </section>
+
+      <section id="divisions" className="divisions-section">
+        <div className="max-w-wrap mx-auto px-6">
+          <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div>
+              <div className="section-index">02 <span>—</span> THE SYSTEM</div>
+              <h2 className="section-title mt-5">তিনটি দিক।<br /><span>একটি ভবিষ্যৎ।</span></h2>
+            </div>
+            <p className="max-w-xs text-sm leading-7 text-ink/55">একটি ইউনিটের উপজাত অন্যটির ইনপুট হয়ে ওঠে। এটাই Agro Valley-এর কাজের মূল নকশা।</p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {divisions.map((division) => (
+              <Link key={division.title} href={division.href} className={`division-card division-${division.tone} group`}>
+                <div className="flex items-start justify-between">
+                  <span className="division-number">{division.number}</span>
+                  <span className="division-arrow" aria-hidden="true">↗</span>
+                </div>
+                <div className="division-art" aria-hidden="true">
+                  <span className="art-ring art-ring-one" />
+                  <span className="art-ring art-ring-two" />
+                  <span className="art-core" />
+                </div>
+                <div className="relative z-10 mt-20">
+                  <div className="mini-label">{division.subtitle}</div>
+                  <h3>{division.title}</h3>
+                  <p>{division.body}</p>
+                  <span className="division-link">বিস্তারিত দেখুন <span>→</span></span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* PHOTO GRID */}
-      <section className="py-24 md:py-32 border-t border-ink/5">
+      <section className="field-section">
         <div className="max-w-wrap mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="reveal">
-              <p className="font-mono text-xs tracking-[0.25em] uppercase text-brand-dark mb-4">On the Ground</p>
-              <h2 className="font-display font-bold text-3xl md:text-4xl mb-6 leading-tight">মাঠ পর্যায়ে আমাদের কার্যক্রম।</h2>
-              <p className="text-ink/60 leading-relaxed mb-8">আমাদের প্রতিষ্ঠানের প্রতিটি ইউনিট সরাসরি মাঠ পর্যায়ে কাজ করে। পুকুর থেকে শুরু করে খামার এবং সরবরাহ কেন্দ্র — সবকিছুই নিজস্ব তত্ত্বাবধানে পরিচালিত হয়।</p>
-              <Link href="/catalog" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-dark hover:text-brand transition-colors group">পণ্য ক্যাটালগ দেখুন<span className="group-hover:translate-x-1 transition-transform">→</span></Link>
+          <div className="field-card">
+            <div className="field-image-wrap">
+              <img src="/images/poultry-farm.jpg" alt="Agro Valley poultry farm" className="field-image" />
+              <div className="field-image-label">From our fields</div>
             </div>
-            <div className="grid grid-cols-2 gap-4 reveal reveal-delay-2">
-              <div className="space-y-4"><UnitPhoto src="/images/aqua-harvest.jpg" alt="পুকুর থেকে মাছ সংগ্রহ" /><UnitPhoto src="/images/poultry-farm.jpg" alt="লেয়ার মুরগির খামার" /></div>
-              <div className="pt-8"><UnitPhoto src="/images/agro-valley-shop.jpg" alt="Agro-Vet শোরুম" /></div>
+            <div className="field-copy">
+              <div className="section-index text-white/60">03 <span>—</span> IN PRACTICE</div>
+              <h2 className="field-title">মাঠে যা করি,<br /><em>বাজারে তা রাখি।</em></h2>
+              <p>আমাদের প্রতিটি সিদ্ধান্তের শুরু খামারে। সঠিক খাদ্য, নিয়মিত পরিচর্যা এবং দক্ষ মানুষের হাতে গড়ে ওঠে এমন পণ্য যা আপনার ব্যবসা ও পরিবারের উপর ভরসা করা যায়।</p>
+              <Link href="/about" className="button-light">আমাদের গল্প <span aria-hidden="true">↗</span></Link>
             </div>
           </div>
         </div>
       </section>
 
-      <ContactCTA />
+      <section className="contact-strip">
+        <div className="max-w-wrap mx-auto flex flex-col gap-8 px-6 py-20 md:flex-row md:items-end md:justify-between md:py-28">
+          <div>
+            <div className="section-index">04 <span>—</span> LET&apos;S TALK</div>
+            <h2 className="contact-title mt-5">আপনার পরের<br /><span>ভালো সিদ্ধান্তটি</span> কোথায়?</h2>
+          </div>
+          <div className="md:pb-2 md:text-right">
+            <p className="mb-5 max-w-xs text-sm leading-7 text-ink/55 md:ml-auto">পাইকারি সরবরাহ, খামার-পরামর্শ বা অংশীদারিত্ব—আমাদের সঙ্গে কথা বলুন।</p>
+            <Link href="/contact" className="button-primary">যোগাযোগ করুন <span aria-hidden="true">↗</span></Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
