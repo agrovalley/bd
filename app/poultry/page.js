@@ -1,4 +1,3 @@
-import Link from "next/link";
 import DivisionBand from "@/components/DivisionBand";
 import OtherUnitsLinks from "@/components/OtherUnitsLinks";
 import ContactCTA from "@/components/ContactCTA";
@@ -12,11 +11,6 @@ export const metadata = {
 export default function PoultryPage() {
   return (
     <main>
-      <section className="division-page-wrapper">
-        <div className="max-w-wrap mx-auto px-6">
-          <Link href="/" className="division-home-link inline-flex items-center gap-2 text-xs md:text-sm text-ink/50 hover:text-brand-dark transition-colors bg-white/50 backdrop-blur-sm px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-ink/10 hover:border-brand/30">← হোমে ফিরুন</Link>
-        </div>
-      </section>
       <DivisionBand id="poultry" eyebrow="Division 02 — Fresh Egg Production" title="Agro Valley Poultry" englishName="Fresh egg production" description="আধুনিক স্বাস্থ্যব্যবস্থাপনার মাধ্যমে বড় পরিসরে লেয়ার মুরগি পালন করা হয়, যা থেকে নিয়মিত তাজা ডিম উৎপাদিত হয় এবং আড়ত, দোকান ও পরিবেশক পর্যায়ে সরবরাহ করা হয়।" points={["বড় পরিসরে লেয়ার মুরগি পালন","নিয়মিত তাজা ডিম উৎপাদন ও সরবরাহ","আড়ত, দোকান ও পরিবেশক পর্যায়ে পাইকারি ডিম সরবরাহ","মানসম্মত স্বাস্থ্যব্যবস্থাপনায় উৎপাদিত ডিম","নিজস্ব ফিড ও ব্যবস্থাপনা সহায়তায় খামার পরিচালনা"]} illustration={<UnitPhoto src="/images/poultry-farm.jpg" alt="Agro Valley Poultry — লেয়ার মুরগির খামার" priority />} reverse />
       <section className="py-24 md:py-32 border-t border-ink/5 bg-surface">
         <div className="max-w-wrap mx-auto px-6">
