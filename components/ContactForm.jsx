@@ -16,7 +16,7 @@ export default function ContactForm() {
       const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || "বার্তা পাঠানো যায়নি।");
-      const subject = encodeURIComponent(`AgroValley Farms – অনুসন্ধান: ${form.interest}`);
+      const subject = encodeURIComponent(`M/S Agro Valley Co. – অনুসন্ধান: ${form.interest}`);
       const body = encodeURIComponent(buildMsg());
       setStatus({ type: "success", message: "তথ্য যাচাই হয়েছে। আপনার ইমেইল অ্যাপ খোলা হচ্ছে…" });
       setForm(INITIAL);

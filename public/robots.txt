@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://avg.vercel.app/sitemap.xml
+Sitemap: https://agrovalley-co.vercel.app/sitemap.xml

@@ -2,8 +2,8 @@ import CycleDiagram from "@/components/CycleDiagram";
 import ContactCTA from "@/components/ContactCTA";
 
 export const metadata = {
-  title: "পরিচিতি | AgroValley Farms",
-  description: "AgroValley Farms সম্পর্কে জানুন — একটি সমন্বিত কৃষি প্রতিষ্ঠান, যেখানে মাছ চাষ, ডিম উৎপাদন এবং ফিড-ঔষধ সরবরাহ একই ব্যবস্থাপনার অধীনে পরিচালিত হয়।",
+  title: "পরিচিতি | M/S Agro Valley Co.",
+  description: "M/S Agro Valley Co. সম্পর্কে জানুন — একটি সমন্বিত কৃষি প্রতিষ্ঠান, যেখানে মাছ চাষ, ডিম উৎপাদন এবং ফিড-ঔষধ সরবরাহ একই ব্যবস্থাপনার অধীনে পরিচালিত হয়।",
 };
 
 const STAGES = [
@@ -32,9 +32,9 @@ export default function AboutPage() {
               <h2 className="font-display font-bold text-3xl leading-snug">উৎপাদন থেকে সরবরাহ — একই হাতে।</h2>
             </div>
             <div className="md:col-span-8 space-y-6 text-ink/70 leading-relaxed reveal reveal-delay-2">
-              <p className="text-lg">AgroValley Farms একটি সমন্বিত (integrated) কৃষি প্রতিষ্ঠান, যা উৎপাদন থেকে সরবরাহ — পুরো শৃঙ্খলটি নিজেদের নিয়ন্ত্রণে পরিচালনা করে। প্রতিষ্ঠানটি তিনটি পরিপূরক ইউনিটে বিভক্ত — <strong className="text-ink">Aqua</strong> (মাছ চাষ), <strong className="text-ink">Poultry</strong> (ডিম উৎপাদন) এবং <strong className="text-ink">Agro-Vet</strong> (ফিড ও ঔষধ সরবরাহ)।</p>
+              <p className="text-lg">M/S Agro Valley Co. একটি সমন্বিত (integrated) কৃষি প্রতিষ্ঠান, যা উৎপাদন থেকে সরবরাহ — পুরো শৃঙ্খলটি নিজেদের নিয়ন্ত্রণে পরিচালনা করে। প্রতিষ্ঠানটি তিনটি পরিপূরক ইউনিটে বিভক্ত — <strong className="text-ink">Aqua</strong> (মাছ চাষ), <strong className="text-ink">Poultry</strong> (ডিম উৎপাদন) এবং <strong className="text-ink">Agro-Vet</strong> (ফিড ও ঔষধ সরবরাহ)।</p>
               <p>প্রতিটি ইউনিট একে অপরের সাথে সংযুক্ত: নিজস্ব ফিড ও ঔষধ দিয়ে খামার পরিচালনা করা হয়, আর উৎপাদিত মাছ ও ডিম ঢাকাসহ দেশের বিভিন্ন অঞ্চলে সরবরাহ করা হয়। এই সমন্বিত মডেল উৎপাদন, মান নিয়ন্ত্রণ এবং সরবরাহ ব্যবস্থাপনাকে একই চক্রে যুক্ত করে।</p>
-              <p>প্রতিষ্ঠানের প্রতিটি সিদ্ধান্তে আমরা তিনটি বিষয়কে গুরুত্ব দিই — মান, যত্ন এবং নির্ভরযোগ্য সরবরাহ। এই তিনটি নীতির উপর ভিত্তি করেই Agro Valley Group-এর প্রতিটি ইউনিট পরিচালিত হয়।</p>
+              <p>প্রতিষ্ঠানের প্রতিটি সিদ্ধান্তে আমরা তিনটি বিষয়কে গুরুত্ব দিই — মান, যত্ন এবং নির্ভরযোগ্য সরবরাহ। এই তিনটি নীতির উপর ভিত্তি করেই M/S Agro Valley Co.-এর প্রতিটি ইউনিট পরিচালিত হয়।</p>
               <div className="pt-4 border-t border-ink/10">
                 <p className="font-mono text-sm text-ink/40">Proprietor: Md. Johurul Haque · স্বত্বাধিকারী: মোঃ জহুরুল হক</p>
               </div>

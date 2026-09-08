@@ -17,8 +17,8 @@ export default function Footer() {
           <div>
             <Link href="/" className="brand-lockup footer-brand">
               <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
-              <span className="brand-name">Agro<span>Valley</span></span>
-              <span className="brand-suffix">Farms</span>
+              <span className="brand-name">Agro Valley</span>
+              <span className="brand-suffix">Co.</span>
             </Link>
             <p className="footer-statement">একটি সমন্বিত কৃষি প্রতিষ্ঠান—পুকুর, খামার এবং সরবরাহের মধ্যে আরও ভালো একটি সম্পর্ক তৈরি করছি।</p>
             <a href="/visiting-card/agro-valley-group-front.jpg" className="footer-download" download>ভিজিটিং কার্ড ডাউনলোড <span>↗</span></a>
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} AgroValley Farms</span>
+          <span>© {new Date().getFullYear()} M/S Agro Valley Co.</span>
           <span>Quality · Care · Supply</span>
           <span>Made for the everyday good.</span>
         </div>

@@ -62,7 +62,7 @@ export default function Home() {
               যত্ন—এক জায়গায়।
             </h1>
             <p className="mt-6 max-w-md text-[1.05rem] leading-8 text-[#3C463E]">
-              Agro Valley তিনটি ইউনিট নিয়ে কাজ করে: মাছ চাষ, ডিম উৎপাদন আর
+              M/S Agro Valley Co. তিনটি ইউনিট নিয়ে কাজ করে: মাছ চাষ, ডিম উৎপাদন আর
               ফিড-ভেটেরিনারি সরবরাহ। লক্ষ্য একটাই—প্রতিদিন আপনার কাছে যেন
               তাজা আর নির্ভরযোগ্য পণ্য পৌঁছায়।
             </p>
@@ -97,7 +97,7 @@ export default function Home() {
           <div className="relative min-h-[320px] overflow-hidden rounded-3xl md:min-h-full">
             <img
               src="/images/aqua-harvest.jpg"
-              alt="Agro Valley-র পুকুরে মাছ ধরার দৃশ্য"
+              alt="M/S Agro Valley Co.-র পুকুরে মাছ ধরার দৃশ্য"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#16241C]/80 to-transparent px-6 pb-6 pt-16 text-[#F5F3EA]">
@@ -189,7 +189,7 @@ export default function Home() {
           <div className="overflow-hidden rounded-3xl">
             <img
               src="/images/poultry-farm.jpg"
-              alt="Agro Valley-র পোলট্রি খামার"
+              alt="M/S Agro Valley Co.-র পোলট্রি খামার"
               className="h-full w-full object-cover"
             />
           </div>

@@ -65,5 +65,5 @@ export async function POST(request) {
 }
 
 export async function GET() {
-  return NextResponse.json({ ok: true, service: "Agro Valley contact endpoint" }, { status: 200 });
+  return NextResponse.json({ ok: true, service: "M/S Agro Valley Co. contact endpoint" }, { status: 200 });
 }

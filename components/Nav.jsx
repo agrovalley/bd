@@ -30,10 +30,10 @@ export default function Nav() {
   return (
     <header className={`site-header ${scrolled ? "site-header-scrolled" : ""}`}>
       <nav className="max-w-wrap mx-auto flex items-center justify-between px-6 py-5">
-        <Link href="/" className="brand-lockup" aria-label="Agro Valley home">
+        <Link href="/" className="brand-lockup" aria-label="M/S Agro Valley Co. home">
           <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
-          <span className="brand-name">Agro<span>Valley</span></span>
-          <span className="brand-suffix">Farms</span>
+          <span className="brand-name">Agro Valley</span>
+          <span className="brand-suffix">Co.</span>
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">

@@ -1,4 +1,4 @@
-# AgroValley Farms — ওয়েবসাইট
+# M/S Agro Valley Co. — ওয়েবসাইট
 
 Next.js (App Router) + Tailwind CSS দিয়ে তৈরি একটি আধুনিক, মোবাইল ও ল্যাপটপ —
 উভয়ের জন্য রেস্পন্সিভ, **মাল্টি-পেজ** ব্র্যান্ড সাইট। হোম, About, তিনটি ইউনিট
@@ -21,7 +21,7 @@ DevTools-এ device toolbar (Ctrl+Shift+M / Cmd+Shift+M) ব্যবহার �
 cd agro-valley
 git init
 git add .
-git commit -m "AgroValley Farms — multi-page website"
+git commit -m "M/S Agro Valley Co. — multi-page website"
 git branch -M main
 git remote add origin https://github.com/<আপনার-ইউজারনেম>/agro-valley.git
 git push -u origin main
@@ -39,9 +39,9 @@ git push -u origin main
    দরকার নেই।
 5. **Deploy** চাপুন।
 
-### ডোমেইন/অ্যালিয়াস — `avg.vercel.app`
+### ডোমেইন/অ্যালিয়াস — `agrovalley-co.vercel.app`
 
-ডিপ্লয়ের পর Vercel প্রজেক্টের **Settings → Domains** এ গিয়ে `avg.vercel.app`
+ডিপ্লয়ের পর Vercel প্রজেক্টের **Settings → Domains** এ গিয়ে `agrovalley-co.vercel.app`
 অ্যালিয়াসটি যোগ করুন। এটি ইতিমধ্যে অন্য কোনো Vercel অ্যাকাউন্টে ব্যবহৃত না থাকলে
 সরাসরি যুক্ত হয়ে যাবে; যদি "already in use" দেখায়, তাহলে ভিন্ন কোনো Vercel
 অ্যাকাউন্ট/প্রজেক্ট আগে থেকেই এই নামটি ব্যবহার করছে — সেক্ষেত্রে যাচাই করে নিন।
@@ -95,7 +95,7 @@ git push -u origin main
 
 ```
 app/
-  layout.js         -> ফন্ট, মেটাডাটা (avg.vercel.app), Nav+Footer wrapping
+  layout.js         -> ফন্ট, মেটাডাটা (agrovalley-co.vercel.app), Nav+Footer wrapping
   page.js           -> হোমপেজ
   about/page.js     -> পরিচিতি পেজ
   aqua/page.js      -> Agro Valley Aqua পেজ
