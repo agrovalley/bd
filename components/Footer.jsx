@@ -21,7 +21,10 @@ export default function Footer() {
               <span className="brand-suffix">Co.</span>
             </Link>
             <p className="footer-statement">একটি সমন্বিত কৃষি প্রতিষ্ঠান—পুকুর, খামার এবং সরবরাহের মধ্যে আরও ভালো একটি সম্পর্ক তৈরি করছি।</p>
-            <a href="/visiting-card/agro-valley-group-front.jpg" className="footer-download" download>ভিজিটিং কার্ড ডাউনলোড <span>↗</span></a>
+            <div className="flex flex-col items-start gap-2">
+              <a href="/visiting-card/agro-valley-group-front.jpg" className="footer-download" download>ভিজিটিং কার্ড ডাউনলোড <span>↗</span></a>
+              <a href="/visiting-card/trade-license.jpg" className="footer-download" download>ট্রেড লাইসেন্স ডাউনলোড <span>↗</span></a>
+            </div>
           </div>
           <div>
             <div className="footer-label">Explore</div>
