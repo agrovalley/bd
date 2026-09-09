@@ -38,6 +38,7 @@ export default function Footer() {
               <a href="tel:+8801307085154">+৮৮০ ১৩০৭-০৮৫১৫৪</a>
               <a href="mailto:johurul.bsc@gmail.com">johurul.bsc@gmail.com</a>
               <a href="https://wa.me/8801307085154" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+              <a href="https://drafroza.vercel.app/" target="_blank" rel="noopener noreferrer" className="family-site-link">Family: Dr. Afroza Akter ↗</a>
               <a href="https://www.google.com/maps/@24.3983037,88.730349,16z" target="_blank" rel="noopener noreferrer">রাজশাহী, বাংলাদেশ ↗</a>
             </div>
           </div>
