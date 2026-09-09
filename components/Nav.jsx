@@ -11,6 +11,7 @@ const LINKS = [
   { href: "/poultry", label: "Poultry" },
   { href: "/agro-vet", label: "Agro-Vet" },
   { href: "/catalog", label: "ক্যাটালগ" },
+  { href: "/private-vault", label: "Private Vault" },
 ];
 
 export default function Nav() {

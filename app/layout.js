@@ -1,7 +1,6 @@
 import { Baloo_Da_2, Hind_Siliguri, IBM_Plex_Mono } from "next/font/google";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import SiteChrome from "@/components/SiteChrome";
 import "./globals.css";
 
 const display = Baloo_Da_2({ subsets: ["bengali", "latin"], weight: ["500", "600", "700", "800"], variable: "--font-display", display: "swap" });
@@ -23,9 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="bn">
       <body className={`${display.variable} ${body.variable} ${mono.variable} font-body bg-white text-ink`}>
         <ScrollReveal />
-        <Nav />
-        {children}
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
