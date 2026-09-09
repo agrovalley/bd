@@ -11,7 +11,6 @@ const LINKS = [
   { href: "/poultry", label: "Poultry" },
   { href: "/agro-vet", label: "Agro-Vet" },
   { href: "/catalog", label: "ক্যাটালগ" },
-  { href: "/private-vault", label: "Private Vault" },
 ];
 
 export default function Nav() {
@@ -74,6 +73,7 @@ export default function Nav() {
             </Link>
           ))}
           <Link href="/contact" className={`mobile-nav-link ${pathname === "/contact" ? "mobile-nav-link-active" : ""}`}>যোগাযোগ</Link>
+          <Link href="/private-vault" className={`mobile-nav-link ${pathname?.startsWith("/private-vault") ? "mobile-nav-link-active" : ""}`}>Login / Sign Up</Link>
         </div>
       </div>
     </header>

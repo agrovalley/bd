@@ -7,7 +7,7 @@ const FOOTER_LINKS = [
   { href: "/agro-vet", label: "Agro Valley Agro-Vet" },
   { href: "/catalog", label: "পণ্য ক্যাটালগ" },
   { href: "/contact", label: "যোগাযোগ" },
-  { href: "/private-vault", label: "Private Vault" },
+  { href: "/private-vault", label: "Login / Sign Up" },
 ];
 
 export default function Footer() {

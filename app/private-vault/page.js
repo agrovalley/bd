@@ -27,7 +27,7 @@ function AuthPanel() {
 
   return <main className="vault-shell">
     <div className="vault-auth-card">
-      <div className="vault-auth-brand"><span className="vault-heart">♥</span><span>Private Health Vault</span></div>
+      <div className="vault-auth-brand"><span className="vault-heart">♥</span><span>Personal Health Records</span></div>
       <p className="vault-eyebrow">শুধু আপনার জন্য</p>
       <h1>{mode === "login" ? "আপনার ভল্টে প্রবেশ করুন" : "আপনার ব্যক্তিগত ভল্ট তৈরি করুন"}</h1>
       <p className="vault-muted">আপনার স্বাস্থ্য-তথ্য এই public business site-এর বাইরে, Supabase-এর private access rules-এর অধীনে থাকবে।</p>
@@ -108,7 +108,7 @@ function VaultDashboard({ session }) {
   }
 
   return <main className="vault-dashboard">
-    <header className="vault-topbar"><a className="vault-brand" href="/"><span className="vault-heart">♥</span> Private Vault</a><div className="vault-user"><span>{name}</span><button onClick={() => supabase.auth.signOut()}>লগআউট</button></div></header>
+    <header className="vault-topbar"><a className="vault-brand" href="/"><span className="vault-heart">♥</span> Health Records</a><div className="vault-user"><span>{name}</span><button onClick={() => supabase.auth.signOut()}>লগআউট</button></div></header>
     <div className="vault-content">
       <section className="vault-hero"><div><p className="vault-eyebrow">{role === "admin" ? "Admin / Developer" : "Patient view"}</p><h1>আপনার স্বাস্থ্য-তথ্য, এক শান্ত জায়গায়।</h1><p>শুধু authenticated account দিয়ে প্রবেশযোগ্য। Public business pages আপনার records দেখতে পারে না।</p></div>{role === "admin" && <button className="vault-primary vault-add" onClick={() => setShowForm(true)}>+ নতুন record</button>}</section>
       <div className="vault-stats"><div><span>Total records</span><strong>{records.length}</strong></div><div><span>Latest entry</span><strong>{records[0] ? formatDate(records[0].record_date) : "—"}</strong></div><div><span>Access</span><strong>Private</strong></div></div>
