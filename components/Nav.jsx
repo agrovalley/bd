@@ -73,7 +73,7 @@ export default function Nav() {
             </Link>
           ))}
           <Link href="/contact" className={`mobile-nav-link ${pathname === "/contact" ? "mobile-nav-link-active" : ""}`}>যোগাযোগ</Link>
-          <Link href="/private-vault" className={`mobile-nav-link ${pathname?.startsWith("/private-vault") ? "mobile-nav-link-active" : ""}`}>Login / Sign Up</Link>
+          <Link href="/private-vault" className={`mobile-nav-link ${pathname?.startsWith("/private-vault") ? "mobile-nav-link-active" : ""}`}>Login</Link>
         </div>
       </div>
     </header>

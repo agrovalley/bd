@@ -294,3 +294,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sun); outline-o
 .hub-empty { padding: 44px; border: 1px dashed #bfd0c0; border-radius: 18px; background: #fff; color: #829087; text-align: center; }
 @media (max-width: 900px) { .hub-sidebar { width: 220px; flex-basis: 220px; } .hub-summary-grid { grid-template-columns: repeat(2, 1fr); } .hub-card-grid, .hub-lab-grid { grid-template-columns: 1fr; } }
 @media (max-width: 700px) { .hub-layout { display: block; } .hub-sidebar { display: none; } .hub-main { padding: 20px 16px 60px; } .hub-mobile-nav { display: flex; gap: 6px; margin: -3px 0 22px; overflow-x: auto; padding-bottom: 4px; } .hub-mobile-nav button { flex: 0 0 auto; white-space: nowrap; } .hub-summary-grid { grid-template-columns: 1fr; } .hub-list-head { align-items: stretch; flex-direction: column; } .hub-list-head input { width: 100%; } .hub-row { grid-template-columns: 1fr auto; gap: 8px; } .hub-row time { grid-column: 1 / -1; text-align: left; } .hub-admin-bar { align-items: stretch; flex-direction: column; } }
+
+.hub-section-copy { max-width: 720px; margin: 0 0 22px; color: #718178; line-height: 1.8; }
+.hub-status-high { color: #a8563f !important; }
