@@ -72,7 +72,7 @@ export default function Nav() {
               {link.label}
             </Link>
           ))}
-          <a href="tel:+8801307085154" className="mobile-nav-phone">+৮৮০ ১৩০৭-০৮৫১৫৪</a>
+          <Link href="/contact" className={`mobile-nav-link ${pathname === "/contact" ? "mobile-nav-link-active" : ""}`}>যোগাযোগ</Link>
         </div>
       </div>
     </header>
