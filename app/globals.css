@@ -300,3 +300,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sun); outline-o
 .mfa-qr { display: block; width: 220px; height: 220px; margin: 22px auto; padding: 10px; background: #fff; border-radius: 14px; }
 .mfa-code-label { display: block; margin: 18px 0; font-weight: 650; color: #193128; }
 .mfa-code-label input { display: block; width: 100%; margin-top: 8px; padding: 13px 14px; border: 1px solid #d8e1dc; border-radius: 10px; font-size: 24px; letter-spacing: .3em; text-align: center; }
+.mfa-secret { margin: 20px 0; padding: 15px; border: 1px solid #d8e1dc; border-radius: 12px; background: #f7faf7; }
+.mfa-secret span { display: block; margin-bottom: 8px; color: #718178; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
+.mfa-secret code { display: block; overflow-wrap: anywhere; color: #193128; font-size: 17px; font-weight: 700; letter-spacing: .08em; user-select: all; }
