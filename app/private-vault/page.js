@@ -66,23 +66,43 @@ function VaultDashboard({ session }) {
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [role, setRole] = useState("patient");
+  const [managedUserId, setManagedUserId] = useState(session.user.id);
   const [query, setQuery] = useState("");
   const [showForm, setShowForm] = useState(false);
   const [form, setForm] = useState(emptyForm);
   const [saving, setSaving] = useState(false);
   const name = session.user.user_metadata?.name || session.user.email?.split("@")[0] || "আপনি";
 
-  async function loadRecords() {
+  async function loadRecords(userId = managedUserId, isAdmin = role === "admin") {
     setLoading(true);
-    const result = await supabase.from("health_records").select("id,user_id,record_type,title,value,notes,file_url,record_date,created_at").eq("user_id", session.user.id).order("record_date", { ascending: false }).order("created_at", { ascending: false });
+    let queryBuilder = supabase.from("health_records").select("id,user_id,record_type,title,value,notes,file_url,record_date,created_at");
+    if (!isAdmin) queryBuilder = queryBuilder.eq("user_id", userId);
+    const result = await queryBuilder.order("record_date", { ascending: false }).order("created_at", { ascending: false });
     if (result.error) { setError(result.error.message); setRecords([]); } else setRecords(result.data || []);
     setLoading(false);
   }
-  useEffect(() => { loadRecords(); }, []);
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      const roleResult = await supabase.from("user_roles").select("role,user_id,email").eq("email", session.user.email?.toLowerCase() || "").maybeSingle();
+      if (!active) return;
+      const nextRole = roleResult.data?.role === "admin" ? "admin" : "patient";
+      let ownerId = roleResult.data?.user_id || session.user.id;
+      if (nextRole === "admin") {
+        const patient = await supabase.from("user_roles").select("user_id").eq("email", "johurul.bsc@outlook.com").maybeSingle();
+        ownerId = patient.data?.user_id || session.user.id;
+      }
+      if (!active) return;
+      setRole(nextRole); setManagedUserId(ownerId); await loadRecords(ownerId, nextRole === "admin");
+    })();
+    return () => { active = false; };
+  }, [session.user.id]);
   const filtered = useMemo(() => { const q = query.trim().toLowerCase(); return records.filter((r) => !q || [r.title, r.record_type, r.value, r.notes].filter(Boolean).join(" ").toLowerCase().includes(q)); }, [records, query]);
   async function saveRecord(event) {
     event.preventDefault(); setSaving(true); setError("");
-    const result = await supabase.from("health_records").insert({ ...form, user_id: session.user.id }).select("id,user_id,record_type,title,value,notes,file_url,record_date,created_at").single();
+    if (role !== "admin") { setError("Patient access is read-only."); setSaving(false); return; }
+    const result = await supabase.from("health_records").insert({ ...form, user_id: managedUserId }).select("id,user_id,record_type,title,value,notes,file_url,record_date,created_at").single();
     if (result.error) setError(result.error.message); else { setRecords((items) => [result.data, ...items]); setForm({ ...emptyForm, record_date: new Date().toISOString().slice(0, 10) }); setShowForm(false); }
     setSaving(false);
   }
@@ -90,12 +110,12 @@ function VaultDashboard({ session }) {
   return <main className="vault-dashboard">
     <header className="vault-topbar"><a className="vault-brand" href="/"><span className="vault-heart">♥</span> Private Vault</a><div className="vault-user"><span>{name}</span><button onClick={() => supabase.auth.signOut()}>লগআউট</button></div></header>
     <div className="vault-content">
-      <section className="vault-hero"><div><p className="vault-eyebrow">Private health space</p><h1>আপনার স্বাস্থ্য-তথ্য, এক শান্ত জায়গায়।</h1><p>শুধু authenticated account দিয়ে প্রবেশযোগ্য। Public business pages আপনার records দেখতে পারে না।</p></div><button className="vault-primary vault-add" onClick={() => setShowForm(true)}>+ নতুন record</button></section>
+      <section className="vault-hero"><div><p className="vault-eyebrow">{role === "admin" ? "Admin / Developer" : "Patient view"}</p><h1>আপনার স্বাস্থ্য-তথ্য, এক শান্ত জায়গায়।</h1><p>শুধু authenticated account দিয়ে প্রবেশযোগ্য। Public business pages আপনার records দেখতে পারে না।</p></div>{role === "admin" && <button className="vault-primary vault-add" onClick={() => setShowForm(true)}>+ নতুন record</button>}</section>
       <div className="vault-stats"><div><span>Total records</span><strong>{records.length}</strong></div><div><span>Latest entry</span><strong>{records[0] ? formatDate(records[0].record_date) : "—"}</strong></div><div><span>Access</span><strong>Private</strong></div></div>
       {showForm && <form className="vault-new-record" onSubmit={saveRecord}><h2>নতুন health record</h2><div className="vault-grid"><label>ধরন<input value={form.record_type} onChange={(e) => setForm({ ...form, record_type: e.target.value })} required /></label><label>তারিখ<input type="date" value={form.record_date} onChange={(e) => setForm({ ...form, record_date: e.target.value })} required /></label><label>শিরোনাম<input value={form.title} onChange={(e) => setForm({ ...form, title: e.target.value })} required /></label><label>Value<input value={form.value} onChange={(e) => setForm({ ...form, value: e.target.value })} required /></label><label className="vault-wide">Notes<textarea value={form.notes} onChange={(e) => setForm({ ...form, notes: e.target.value })} /></label></div><div className="vault-actions"><button type="button" onClick={() => setShowForm(false)}>বাতিল</button><button className="vault-primary" disabled={saving}>{saving ? "সংরক্ষণ হচ্ছে…" : "সংরক্ষণ করুন"}</button></div></form>}
       <section className="vault-list-head"><div><p className="vault-eyebrow">Your timeline</p><h2>Health records</h2></div><input placeholder="Search records…" value={query} onChange={(e) => setQuery(e.target.value)} /></section>
       {error && <p className="vault-message">{error}</p>}
-      {loading ? <p className="vault-muted">Records লোড হচ্ছে…</p> : filtered.length ? <div className="vault-records">{filtered.map((record) => <RecordCard key={record.id} record={record} />)}</div> : <div className="vault-empty">এখনও কোনো record নেই।</div>}
+      {loading ? <p className="vault-muted">Records লোড হচ্ছে…</p> : filtered.length ? <div className="vault-records">{filtered.map((record) => <RecordCard key={record.id} record={record} />)}</div> : <div className="vault-empty">{role === "admin" ? "এই Supabase account-এ এখনো কোনো health record নেই।" : "এখনও কোনো record নেই। আপনার doctor update করলে এখানে দেখা যাবে।"}</div>}
     </div>
   </main>;
 }
