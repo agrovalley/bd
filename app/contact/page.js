@@ -63,7 +63,7 @@ export default function ContactPage() {
       </section>
 
       <div className="pb-10 text-center" aria-label="M/S Agro Valley Co. watermark">
-        <p className="font-mono text-[9px] leading-relaxed tracking-[0.12em] text-ink/25">
+        <p className="font-mono text-[11px] leading-relaxed tracking-[0.08em] text-ink/55">
           <span className="block">2026 M/S Agro Valley Co.</span>
           <span className="block">Quality · Care · Supply</span>
           <span className="block">Made for the everyday good.</span>
